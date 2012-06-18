@@ -13,6 +13,6 @@
   "dependencies": {},
   "devDependencies": {},
   "bin": {
-    "concat": "bin/lorem-ipsum.js"
+    "lorem-ipsum": "bin/lorem-ipsum.js"
   }
 }

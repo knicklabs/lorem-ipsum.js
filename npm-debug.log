@@ -1,0 +1,139 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g' ]
+info using npm@1.1.0-beta-10
+info using node@v0.6.7
+verbose config file /Users/Developer/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose into /usr/local/lib [ '.' ]
+verbose cache add .
+verbose cache add [ '.', null ]
+silly cache add: name, spec, args [ undefined, '.', [ '.', null ] ]
+verbose parsed url { pathname: '.', path: '.', href: '.' }
+verbose caching package.json
+verbose loadDefaults lorem-ipsum@0.0.0
+verbose pack /Users/Developer/Development/LoremIpsum
+verbose pack /Users/Developer/Development/LoremIpsum /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/tmp.tgz
+silly makeList /Users/Developer/Development/LoremIpsum
+silly dir, dirLen [ '/Users/Developer/Development/LoremIpsum', 40 ]
+verbose tarball /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/tmp.tgz
+verbose parent /Users/Developer/Development/LoremIpsum
+verbose mkdir (expected) error ENOENT, no such file or directory '/var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm'
+verbose mkdir done: /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm/LoremIpsum
+silly asyncMap in gTP /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm/LoremIpsum/package.json
+silly asyncMap in gTP /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm/LoremIpsum/bin
+silly asyncMap in gTP /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm/LoremIpsum/bin/lorem-ipsum.js
+silly asyncMap in gTP /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm/LoremIpsum/lib
+silly asyncMap in gTP /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm/LoremIpsum/lib/dictionary.js
+silly asyncMap in gTP /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm/LoremIpsum/lib/generator.js
+verbose gunzed /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm/LoremIpsum
+verbose rm'ed /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package
+verbose renamed [ '/var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/___package.npm/LoremIpsum',
+verbose renamed   '/var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package' ]
+verbose caching /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package/package.json
+verbose loadDefaults lorem-ipsum@0.0.0
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package/package.json
+verbose pack /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package
+verbose pack /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package /Users/Developer/.npm/lorem-ipsum/0.0.0/package.tgz
+silly makeList /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package
+silly dir, dirLen [ '/var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package',
+silly dir, dirLen   109 ]
+verbose tarball /Users/Developer/.npm/lorem-ipsum/0.0.0/package.tgz
+verbose parent /var/folders/9k/mh0401c92x37d1jdxb7_7kqm0000gp/T/npm-1339991083173/1339991083173-0.03663014713674784/package
+verbose mkdir (expected) error ENOENT, no such file or directory '/Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm'
+verbose mkdir done: /Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /Users/Developer/.npm/lorem-ipsum/0.0.0/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm/package
+silly asyncMap in gTP /Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm/package/package.json
+silly asyncMap in gTP /Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm/package/bin
+silly asyncMap in gTP /Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm/package/bin/lorem-ipsum.js
+silly asyncMap in gTP /Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm/package/lib
+silly asyncMap in gTP /Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm/package/lib/dictionary.js
+silly asyncMap in gTP /Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm/package/lib/generator.js
+verbose gunzed /Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm/package
+verbose rm'ed /Users/Developer/.npm/lorem-ipsum/0.0.0/package
+verbose renamed [ '/Users/Developer/.npm/lorem-ipsum/0.0.0/___package.npm/package',
+verbose renamed   '/Users/Developer/.npm/lorem-ipsum/0.0.0/package' ]
+verbose caching /Users/Developer/.npm/lorem-ipsum/0.0.0/package/package.json
+verbose loadDefaults lorem-ipsum@0.0.0
+silly updated sha bytes 1539
+info shasum 8cb4e217fac3846a800857f60ba79c7072e70b1c
+info shasum /Users/Developer/.npm/lorem-ipsum/0.0.0/package.tgz
+verbose from cache /Users/Developer/.npm/lorem-ipsum/0.0.0/package/package.json
+verbose chmod /Users/Developer/.npm/lorem-ipsum/0.0.0/package.tgz 644
+verbose chown [ '/Users/Developer/.npm/lorem-ipsum/0.0.0/package.tgz',
+verbose chown   502,
+verbose chown   20 ]
+silly resolved [ { author: 
+silly resolved      { name: 'Nickolas Kenyeres',
+silly resolved        email: 'nkenyeres@gmail.com',
+silly resolved        url: 'http://knicklabs.github.com' },
+silly resolved     name: 'lorem-ipsum',
+silly resolved     description: 'Generate placeholder text using lorem ipsum.',
+silly resolved     version: '0.0.0',
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/knicklabs/node-lorem-ipsum.git' },
+silly resolved     engines: { node: '*' },
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     bin: { concat: 'bin/lorem-ipsum.js' },
+silly resolved     _id: 'lorem-ipsum@0.0.0',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.0-beta-10',
+silly resolved     _nodeVersion: 'v0.6.7',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '8cb4e217fac3846a800857f60ba79c7072e70b1c' } } ]
+info into /usr/local/lib lorem-ipsum@0.0.0
+info installOne lorem-ipsum@0.0.0
+info unbuild /usr/local/lib/node_modules/lorem-ipsum
+verbose caching /usr/local/lib/node_modules/lorem-ipsum/package.json
+verbose loadDefaults lorem-ipsum@0.0.0
+info preuninstall lorem-ipsum@0.0.0
+info uninstall lorem-ipsum@0.0.0
+verbose unbuild lorem-ipsum@0.0.0 [ true,
+verbose unbuild lorem-ipsum@0.0.0   '/usr/local/lib/node_modules',
+verbose unbuild lorem-ipsum@0.0.0   '/usr/local/lib/node_modules' ]
+verbose binRoot [ '/usr/local/bin', { concat: 'bin/lorem-ipsum.js' } ]
+ERR! error installing lorem-ipsum@0.0.0
+info unbuild /usr/local/lib/node_modules/lorem-ipsum
+verbose caching /usr/local/lib/node_modules/lorem-ipsum/package.json
+verbose loadDefaults lorem-ipsum@0.0.0
+info preuninstall lorem-ipsum@0.0.0
+info uninstall lorem-ipsum@0.0.0
+verbose unbuild lorem-ipsum@0.0.0 [ true,
+verbose unbuild lorem-ipsum@0.0.0   '/usr/local/lib/node_modules',
+verbose unbuild lorem-ipsum@0.0.0   '/usr/local/lib/node_modules' ]
+verbose binRoot [ '/usr/local/bin', { concat: 'bin/lorem-ipsum.js' } ]
+ERR! error rolling back lorem-ipsum@0.0.0 Error: Refusing to delete: /usr/local/bin/concat not in /usr/local/lib/node_modules/lorem-ipsum
+ERR! error rolling back lorem-ipsum@0.0.0     at clobberFail (/usr/local/lib/node_modules/npm/node_modules/rimraf/rimraf.js:110:12)
+ERR! error rolling back lorem-ipsum@0.0.0     at next (/usr/local/lib/node_modules/npm/node_modules/rimraf/rimraf.js:97:42)
+ERR! error rolling back lorem-ipsum@0.0.0     at Object.oncomplete (/usr/local/lib/node_modules/npm/node_modules/rimraf/rimraf.js:105:12)
+verbose installOne cb lorem-ipsum@0.0.0
+ERR! Error: Refusing to delete: /usr/local/bin/concat not in /usr/local/lib/node_modules/lorem-ipsum
+ERR!     at clobberFail (/usr/local/lib/node_modules/npm/node_modules/rimraf/rimraf.js:110:12)
+ERR!     at next (/usr/local/lib/node_modules/npm/node_modules/rimraf/rimraf.js:97:42)
+ERR!     at Object.oncomplete (/usr/local/lib/node_modules/npm/node_modules/rimraf/rimraf.js:105:12)
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Darwin 11.2.0
+ERR! command "node" "/usr/local/bin/npm" "install" "-g"
+ERR! cwd /Users/Developer/Development/LoremIpsum
+ERR! node -v v0.6.7
+ERR! npm -v 1.1.0-beta-10
+ERR! path /usr/local/bin/concat
+ERR! code EEXIST
+ERR! message Refusing to delete: /usr/local/bin/concat not in /usr/local/lib/node_modules/lorem-ipsum
+verbose exit [ 1, true ]
