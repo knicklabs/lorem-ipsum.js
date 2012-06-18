@@ -2,7 +2,7 @@
   "author": "Nickolas Kenyeres <nkenyeres@gmail.com> (http://knicklabs.github.com)",
   "name": "lorem-ipsum",
   "description": "Generate placeholder text using lorem ipsum.",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "git://github.com/knicklabs/node-lorem-ipsum.git"
@@ -12,7 +12,9 @@
   },
   "dependencies": {},
   "devDependencies": {},
+  "main": "./lib/generator",
   "bin": {
     "lorem-ipsum": "bin/lorem-ipsum.bin.js"
-  }
+  },
+  "optionalDependencies": {}
 }
