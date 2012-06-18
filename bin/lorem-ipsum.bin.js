@@ -48,6 +48,9 @@ if (copy) {
     case 'win32':
       stat = 'echo "' + value + '" | clip';
       break;
+    case 'linux':
+      stat = 'echo "' + value + '" | xclip -selection clipboard';
+      break;
   }
   
   exec(stat, function(err, stdout, stderr) {
