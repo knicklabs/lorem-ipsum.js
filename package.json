@@ -11,5 +11,8 @@
     "node": "*"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "bin": {
+    "concat": "bin/lorem-ipsum.js"
+  }
 }
