@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Node-lorem-ipsum by knicklabs</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Node-lorem-ipsum</h1>
+        <p class="header">A node package for generating placeholder text using lorem ipsum.</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/knicklabs/node-lorem-ipsum/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/knicklabs/node-lorem-ipsum/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/knicklabs/node-lorem-ipsum">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/knicklabs">knicklabs</a></p>
+
+
+      </header>
+      <section>
+        <h3>Introducing Node Lorem Ipsum</h3>
+
+<p>Node Lorem Ipsum generates placeholder text using a lorem ipsum dictionary. It can be used as a module in your Node.js programs or it can be used from the command line via its command line interface (CLI).</p>
+
+<h3>Getting Started with the Module</h3>
+
+<p>Install Node Lorem Ipsum locally in your program directory.</p>
+
+<div class="highlight"><pre>npm install lorem-ipsum
+</pre></div>
+
+<p>You can then require Node Lorem Ipsum. It returns a function which generates a string of text when invoked. </p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">lorem</span><span class="o">-</span><span class="nx">ipsum</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'lorem-ipsum'</span><span class="p">)</span>
+  <span class="p">,</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">lorem</span><span class="o">-</span><span class="nx">ipsum</span><span class="p">();</span>
+</pre></div>
+
+<p>By default, Node Lorem Ipsum outputs a string of random words. You can pass options to fine-tune the output.
+The default options are shown in the example above along with descriptions of what each option controls. </p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">lorem</span><span class="o">-</span><span class="nx">ipsum</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'lorem-ipsum'</span><span class="p">)</span>
+  <span class="p">,</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">lorem</span><span class="o">-</span><span class="nx">ipsum</span><span class="p">({</span>
+        <span class="nx">count</span><span class="o">:</span> <span class="mi">250</span>              <span class="c1">// Number of words, sentences, or paragraphs.</span>
+      <span class="p">,</span> <span class="nx">units</span><span class="o">:</span> <span class="s1">'words'</span>          <span class="c1">// Choose 'words', 'sentences', or 'paragraphs'.  </span>
+      <span class="p">,</span> <span class="nx">sentenceLowerBound</span><span class="o">:</span> <span class="mi">5</span>   <span class="c1">// Minimum words per sentence.</span>
+      <span class="p">,</span> <span class="nx">sentenceUpperBound</span><span class="o">:</span> <span class="mi">15</span>  <span class="c1">// Maximum words per sentence. </span>
+      <span class="p">,</span> <span class="nx">paragraphLowerBound</span><span class="o">:</span> <span class="mi">3</span>  <span class="c1">// Minimum sentences per paragraph.</span>
+      <span class="p">,</span> <span class="nx">paragraphUpperBound</span><span class="o">:</span> <span class="mi">7</span>  <span class="c1">// Maximum sentences per paragraph.</span>
+      <span class="p">,</span> <span class="nx">paragraphPrefix</span><span class="o">:</span> <span class="s1">'&lt;p&gt;'</span>  <span class="c1">// Text to insert before paragraph.</span>
+      <span class="p">,</span> <span class="nx">paragraphSuffix</span><span class="o">:</span> <span class="s1">'&lt;/p&gt;'</span> <span class="c1">// Text to insert after paragraph.</span>
+    <span class="p">});</span>
+</pre></div>
+
+<h3>Getting Started with the CLI</h3>
+
+<p>Install Node Lorem Ipsum globally to use the command line interface.</p>
+
+<div class="highlight"><pre>npm install lorem-ipsum -g
+</pre></div>
+
+<p>You can then run the command <code>lorem-ipsum</code> to randomly generate 5 sentences of text. You can excercise further 
+control using flags. For example, the following command returns 3 paragraphs of text and copies it to your clipboard.</p>
+
+<div class="highlight"><pre>lorem-ipsum 3 --paragraphs --copy
+</pre></div>
+
+<p>The following is a list of acceptable arguments. Order does not matter.</p>
+
+<table>
+<tr>
+<th>Argument or Flag</th>
+    <th>Description</th>
+  </tr>
+<tr>
+<td>Integer</td>
+    <td>The number of words, sentences or paragraphs to generate</td>
+  </tr>
+<tr>
+<td>--copy or -cp</td>
+    <td>Copy the output to the clipboard</td>
+  </tr>
+<tr>
+<td>--words or --word or -w</td>
+    <td>Generate words</td>
+  </tr>
+<tr>
+<td>--sentences or --sentence or -s</td>
+    <td>Generate sentences</td>
+  </tr>
+<tr>
+<td>--paragraphs or --paragraph or -p</td>
+    <td>Generate paragraphs</td>
+  </tr>
+</table><h3>License</h3>
+
+<p>Copyright (c) 2012 Nickolas Kenyeres</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-33637708-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
