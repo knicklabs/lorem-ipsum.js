@@ -1,22 +1,31 @@
 {
-  "author": "Nickolas Kenyeres <nkenyeres@gmail.com> (http://knicklabs.github.com)",
   "name": "lorem-ipsum",
-  "description": "Generate placeholder text using lorem ipsum.",
-  "version": "0.0.9",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/knicklabs/node-lorem-ipsum.git"
-  },
-  "engines": {
-    "node": "*"
-  },
+  "version": "0.1.0",
+  "description": "Generates passages of lorem ipsum text suitable for use a placeholder in web pages, graphics, and more.",
+  "author": "Nickolas Kenyeres <nkenyeres@gmail.com> (http://knicklabs.github.com)",
+  "license": "MIT/X11",
+  "main": "./lib/generator",
   "dependencies": {
     "optimist": "~0.3.5"
   },
   "devDependencies": {},
-  "main": "./lib/generator",
+  "optionalDependencies": {},
   "bin": {
     "lorem-ipsum": "bin/lorem-ipsum.bin.js"
   },
-  "optionalDependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/knicklabs/node-lorem-ipsum.git"
+  },
+  "keywords": [
+    "lorem",
+    "ipsum",
+    "placeholder",
+    "text",
+    "dummy",
+    "filler"
+  ],
+  "engine": {
+    "node": ">=0.4"
+  }
 }
