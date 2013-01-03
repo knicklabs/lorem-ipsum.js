@@ -1,61 +1,45 @@
 #!/usr/bin/env node
 
-var g = require('./../lib/generator')
-  , options = { count: 5, units: 'sentences' }
-  , copy = false
-  , args = process.argv.slice(2);
-  
-for (var i = 0; i < args.length; i++) {
-  if (args[i].indexOf('-') < 0) {
-    options.count = args[i];
-  } else {
-    switch (args[i]) {
-      case "--words":
-      case "--word":
-      case "-w":
-        options.units = "words";
-        break;
-      case "--sentences":
-      case "--sentence":
-      case "-s":
-        options.units = "sentences";
-        break;
-      case "--paragraphs":
-      case "--paragraph":
-      case "-p":
-        options.units = "paragraphs";
-        break;
-      case "--copy":
-      case "-cp":
-        copy = true;
-        break;
-    }
-  }
+/**
+ * Module dependencies.
+ */
+var execute    = require('child_process').exec
+  , optimist   = require('optimist')
+  , generator  = require('./../lib/generator');
+
+var options    = {}
+  , arguments  = optimist.argv
+  , loremIpsum = ''
+  , statement  = '';
+
+options.units = arguments.units || 'words';
+options.count = arguments.count || 5;
+options.copy  = arguments.copy ? true : false;
+
+// Generate the lorem ipsum text and print it out.
+loremIpsum = generator(options);
+console.log(loremIpsum);
+
+if (!options.copy) process.exit();
+
+// Copy the lorem ipsum text to the clipboard.
+statement = 'echo "' + loremIpsum + '" | ';
+switch (process.platform) {
+  case 'darwin':
+    statement = statement + 'pbcopy';
+    break;
+  case 'win32':
+    statement = statement + 'clip';
+    break;
+  case 'linux':
+  default:
+    statement = statement + 'xclip -selection clipboard';
 }
 
-value = g(options);
-
-console.log(value);
-
-if (copy) {
-  var exec = require('child_process').exec;
-  var stat = '';
-  
-  switch(process.platform) {
-    case 'darwin':
-      stat = 'echo "' + value + '" | pbcopy';
-      break;
-    case 'win32':
-      stat = 'echo "' + value + '" | clip';
-      break;
-    case 'linux':
-      stat = 'echo "' + value + '" | xclip -selection clipboard';
-      break;
+execute(statement, function(err, stdout, stderr) {
+  if (err) {
+    console.log('FAILED TO COPY DATA TO CLIPBOARD');
+    process.exit(1);
   }
-  
-  exec(stat, function(err, stdout, stderr) {
-    if (err) {
-      console.log('FAILED TO COPY DATA TO CLIPBOARD!');
-    }
-  });
-}
+  process.exit();
+});

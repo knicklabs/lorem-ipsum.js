@@ -10,7 +10,9 @@
   "engines": {
     "node": "*"
   },
-  "dependencies": {},
+  "dependencies": {
+    "optimist": "~0.3.5"
+  },
   "devDependencies": {},
   "main": "./lib/generator",
   "bin": {
