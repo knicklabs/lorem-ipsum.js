@@ -23,7 +23,7 @@ You can pass options to the loremIpsum() function to fine-tune the output. See b
 ```javascript
 ...
 output = loremIpsum({
-    count: 250                    // Number of words, sentences, or paragraphs to generate.
+    count: 1                      // Number of words, sentences, or paragraphs to generate.
   , units: 'sentences'            // Generate words, sentences, or paragraphs.
   , sentenceLowerBound: 5         // Minimum words per sentence.
   , sentenceUpperBound: 15        // Maximum words per sentence.
@@ -31,6 +31,7 @@ output = loremIpsum({
   , paragraphUpperBound: 7        // Maximum sentences per paragraph.
   , format: 'plain'               // Plain text or html.
 });
+```
 
 ### Using the Binary
 
@@ -55,15 +56,15 @@ See below for a description of the arguments.
   </tr>
   <tr>
     <td>--count</td>
-    <td>The **number** of words, sentences or paragraphs to generate</td>
+    <td>The ***number*** of words, sentences or paragraphs to generate</td>
   </tr>
   <tr>
     <td>--units</td>
-    <td>Generate **words**, **sentences** or **paragraphs**</td>
+    <td>Generate ***words***, ***sentences*** or ***paragraphs***</td>
   </tr>
   <tr>
     <td>--copy</td>
-    <td>**Copy** the output to the system clipboard</td>
+    <td>***Copy*** the output to the system clipboard</td>
   </tr>
 </table>
 
