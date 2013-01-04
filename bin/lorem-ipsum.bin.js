@@ -1,16 +1,12 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-var execute    = require('child_process').exec
-  , optimist   = require('optimist')
-  , generator  = require('./../lib/generator');
+var optimist   = require('optimist')
+  , generator  = require('./../lib/generator')
+  , clipper    = require('./../lib/clipper');
 
 var options    = {}
   , arguments  = optimist.argv
-  , loremIpsum = ''
-  , statement  = '';
+  , loremIpsum = '';
 
 options.units = arguments.units || 'words';
 options.count = arguments.count || 5;
@@ -20,26 +16,9 @@ options.copy  = arguments.copy ? true : false;
 loremIpsum = generator(options);
 console.log(loremIpsum);
 
-if (!options.copy) process.exit();
-
 // Copy the lorem ipsum text to the clipboard.
-statement = 'echo "' + loremIpsum + '" | ';
-switch (process.platform) {
-  case 'darwin':
-    statement = statement + 'pbcopy';
-    break;
-  case 'win32':
-    statement = statement + 'clip';
-    break;
-  case 'linux':
-  default:
-    statement = statement + 'xclip -selection clipboard';
+if (options.copy) {
+  clipper(loremIpsum, function(err) { err ? process.exit(1) : process.exit() });
+} else {
+  process.exit(); // Successful exit.
 }
-
-execute(statement, function(err, stdout, stderr) {
-  if (err) {
-    console.log('FAILED TO COPY DATA TO CLIPBOARD');
-    process.exit(1);
-  }
-  process.exit();
-});
