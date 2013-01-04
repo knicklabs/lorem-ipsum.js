@@ -8,9 +8,10 @@ var options    = {}
   , arguments  = optimist.argv
   , loremIpsum = '';
 
-options.units = arguments.units || 'words';
-options.count = arguments.count || 5;
-options.copy  = arguments.copy ? true : false;
+options.units  = arguments.units || 'sentences';
+options.count  = arguments.count || 1;
+options.copy   = arguments.copy ? true : false;
+options.format = arguments.format || 'plain'; 
 
 // Generate the lorem ipsum text and print it out.
 loremIpsum = generator(options);
