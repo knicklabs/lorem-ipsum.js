@@ -44,7 +44,7 @@ npm install lorem-ipsum --global
 Execute the statement `lorem-ipsum` on the command line to generate a passage of lorem ipsum. You can pass arguments to the program to fine-tune the output. See below.
 
 ```bash
-lorem-ipsum --units words --count 100 --copy
+lorem-ipsum --units words --count 100 --copy --format html
 ```
 
 See below for a description of the arguments.
@@ -56,15 +56,19 @@ See below for a description of the arguments.
   </tr>
   <tr>
     <td>--count</td>
-    <td>The ***number*** of words, sentences or paragraphs to generate</td>
+    <td>The <strong>number</strong> of words, sentences or paragraphs to generate</td>
   </tr>
   <tr>
     <td>--units</td>
-    <td>Generate ***words***, ***sentences*** or ***paragraphs***</td>
+    <td>Generate <strong>words</strong>, <strong>sentences</strong> or <strong>paragraphs</strong></td>
   </tr>
   <tr>
     <td>--copy</td>
-    <td>***Copy*** the output to the system clipboard</td>
+    <td><strong>Copy</strong> the output to the system clipboard</td>
+  </tr>
+  <tr>
+    <td>--format</td>
+    <td><strong>html</strong> or <strong>plain</strong> text format</td>
   </tr>
 </table>
 
