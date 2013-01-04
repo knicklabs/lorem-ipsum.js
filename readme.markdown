@@ -68,6 +68,10 @@ See below for a description of the arguments.
   </tr>
 </table>
 
+### Notes
+
+The copy feature requires that you have xclip installed if you are using Lorem Ipsum on Linux. The feature will work out of the box on Mac and Windows systems.
+
 ### License
 
 This software is licensed under the MIT license.
