@@ -56,19 +56,19 @@ See below for a description of the arguments.
   </tr>
   <tr>
     <td>--count</td>
-    <td>The *number* of words, sentences or paragraphs to generate</td>
+    <td>The **number** of words, sentences or paragraphs to generate</td>
   </tr>
   <tr>
     <td>--units</td>
-    <td>Generate *words*, *sentences* or *paragraphs*</td>
+    <td>Generate **words**, **sentences** or **paragraphs**</td>
   </tr>
   <tr>
     <td>--copy</td>
-    <td>*Copy* the output to the system clipboard</td>
+    <td>**Copy** the output to the system clipboard</td>
   </tr>
   <tr>
     <td>--format</td>
-    <td>*html* or *plain* text format</td>
+    <td>**html** or *plain* text format</td>
   </tr>
 </table>
 
