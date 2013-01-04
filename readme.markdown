@@ -1,84 +1,75 @@
-### Introducing Node Lorem Ipsum
+### Lorem Ipsum
 
-Node Lorem Ipsum generates placeholder text using a lorem ipsum dictionary. It can be used as a module in your Node.js programs or it can be used from the command line via its command line interface (CLI).
+Lorem Ipsum is a module and binary for the Node.js platform. Use it to generate passages of lorem ipsum. Lorem ipsum is commonly used placeholder or filler text in publishing, graphic design, and web development.
 
-### Getting Started with the Module
+### Using the Module
 
-Install Node Lorem Ipsum locally in your program directory.
+Install the Lorem Ipsum module.
 
-``` bash
+```bash
+cd ~/MyProject
 npm install lorem-ipsum
 ```
 
-You can then require Node Lorem Ipsum. It returns a function which generates a string of text when invoked. 
+Require the Lorem Ipsum module in your script and use it to generate a passage of lorem ipsum.
 
-``` javascript
-var lorem-ipsum = require('lorem-ipsum')
-  , string = lorem-ipsum();
+```javascript
+var loremIpsum = require('lorem-ipsum')
+  , output     = loremIpsum();
 ```
 
-By default, Node Lorem Ipsum outputs a string of random words. You can pass options to fine-tune the output.
-The default options are shown in the example above along with descriptions of what each option controls. 
+You can pass options to the loremIpsum() function to fine-tune the output. See below.
 
-``` javascript
-var lorem-ipsum = require('lorem-ipsum')
-  , string = lorem-ipsum({
-        count: 250              // Number of words, sentences, or paragraphs.
-      , units: 'words'          // Choose 'words', 'sentences', or 'paragraphs'.  
-      , sentenceLowerBound: 5   // Minimum words per sentence.
-      , sentenceUpperBound: 15  // Maximum words per sentence. 
-      , paragraphLowerBound: 3  // Minimum sentences per paragraph.
-      , paragraphUpperBound: 7  // Maximum sentences per paragraph.
-      , paragraphPrefix: '<p>'  // Text to insert before paragraph.
-      , paragraphSuffix: '</p>' // Text to insert after paragraph.
-    });
+```javascript
+...
+output = loremIpsum({
+    count: 250                    // Number of words, sentences, or paragraphs to generate.
+  , units: 'sentences'            // Generate words, sentences, or paragraphs.
+  , sentenceLowerBound: 5         // Minimum words per sentence.
+  , sentenceUpperBound: 15        // Maximum words per sentence.
+  , paragraphLowerBound: 3        // Minimum sentences per paragraph.
+  , paragraphUpperBound: 7        // Maximum sentences per paragraph.
+  , format: 'plain'               // Plain text or html.
+});
+
+### Using the Binary
+
+Install the Lorem Ipsum module globally so that you can access the binary from anywhere.
+
+```bash
+npm install lorem-ipsum --global
 ```
 
-### Getting Started with the CLI
+Execute the statement `lorem-ipsum` on the command line to generate a passage of lorem ipsum. You can pass arguments to the program to fine-tune the output. See below.
 
-Install Node Lorem Ipsum globally to use the command line interface.
-
-``` bash
-npm install lorem-ipsum -g
+```bash
+lorem-ipsum --units words --count 100 --copy
 ```
 
-You can then run the command `lorem-ipsum` to randomly generate 5 sentences of text. You can excercise further 
-control using flags. For example, the following command returns 3 paragraphs of text and copies it to your clipboard.
-
-``` bash
-lorem-ipsum 3 --paragraphs --copy
-```
-
-The following is a list of acceptable arguments. Order does not matter.
+See below for a description of the arguments.
 
 <table>
   <tr>
-    <th>Argument or Flag</th>
+    <th>Argument</th>
     <th>Description</th>
   </tr>
   <tr>
-    <td>Integer</td>
-    <td>The number of words, sentences or paragraphs to generate</td>
+    <td>--count</td>
+    <td>The **number** of words, sentences or paragraphs to generate</td>
   </tr>
   <tr>
-    <td>--copy or -cp</td>
-    <td>Copy the output to the clipboard</td>
+    <td>--units</td>
+    <td>Generate **words**, **sentences** or **paragraphs**</td>
   </tr>
   <tr>
-    <td>--words or --word or -w</td>
-    <td>Generate words</td>
-  </tr>
-  <tr>
-    <td>--sentences or --sentence or -s</td>
-    <td>Generate sentences</td>
-  </tr>
-  <tr>
-    <td>--paragraphs or --paragraph or -p</td>
-    <td>Generate paragraphs</td>
+    <td>--copy</td>
+    <td>**Copy** the output to the system clipboard</td>
   </tr>
 </table>
 
 ### License
+
+This software is licensed under the MIT license.
 
 Copyright (c) 2012 Nickolas Kenyeres
 
