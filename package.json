@@ -6,9 +6,12 @@
   "license": "MIT/X11",
   "main": "./lib/generator",
   "dependencies": {
-    "optimist": "~0.3.5"
+    "optimist": "~0.3.5",
+    "inflection": "~1.2.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "alea": "0.0.9"
+  },
   "optionalDependencies": {},
   "bin": {
     "lorem-ipsum": "bin/lorem-ipsum.bin.js"
