@@ -29,7 +29,8 @@ output = loremIpsum({
   , sentenceUpperBound: 15        // Maximum words per sentence.
   , paragraphLowerBound: 3        // Minimum sentences per paragraph.
   , paragraphUpperBound: 7        // Maximum sentences per paragraph.
-  , format: 'plain'               // Plain text or html.
+  , format: 'plain'               // Plain text or html
+  , random: Math.random           // A PRNG function. Uses Math.random by default
 });
 ```
 
@@ -71,6 +72,20 @@ See below for a description of the arguments.
     <td><strong>html</strong> or <strong>plain</strong> text format</td>
   </tr>
 </table>
+
+You may now also use a short form when running Lorem Ipsum from the command line. Here's some examples:
+
+```
+lorem-ipsum 1 word
+```
+
+```
+lorem-ipsum 15 sentences --copy
+```
+
+```
+lorem-ipsum 5 paragraphs --copy --format html
+```
 
 ### Notes
 
