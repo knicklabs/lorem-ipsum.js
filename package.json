@@ -16,6 +16,9 @@
   "bin": {
     "lorem-ipsum": "bin/lorem-ipsum.bin.js"
   },
+  "scripts": {
+    "test": "nodeunit test"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/knicklabs/node-lorem-ipsum.git"
