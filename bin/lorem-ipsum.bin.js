@@ -8,6 +8,13 @@ var options    = {}
   , arguments  = optimist.argv
   , loremIpsum = '';
 
+// Allow CLI user to run command with plain english. E.g. "lorem-ipsum 1 sentence" or "lorem-ipsum 3 words --copy"
+var nakedArguments = arguments._;
+if (nakedArguments.length >= 2) {
+  arguments.count = nakedArguments[0]; // Clobber count.
+  arguments.units = nakedArguments[1]; // Clobber units.
+}
+
 options.units  = arguments.units || 'sentences';
 options.count  = arguments.count || 1;
 options.copy   = arguments.copy ? true : false;
