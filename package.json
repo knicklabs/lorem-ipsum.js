@@ -1,7 +1,7 @@
 {
   "name": "lorem-ipsum",
   "version": "0.1.1",
-  "description": "Generates passages of lorem ipsum text suitable for use a placeholder in web pages, graphics, and more.",
+  "description": "Generates passages of lorem ipsum text suitable for use as placeholder copy in web pages, graphics, and more.",
   "author": "Nickolas Kenyeres <nkenyeres@gmail.com> (http://knicklabs.github.com)",
   "license": "MIT/X11",
   "main": "./lib/generator",
