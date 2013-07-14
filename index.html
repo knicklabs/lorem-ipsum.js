@@ -28,11 +28,13 @@
         </ul>
       </header>
       <section>
-        <h3>Lorem Ipsum</h3>
+        <h3>
+<a name="lorem-ipsum" class="anchor" href="#lorem-ipsum"><span class="octicon octicon-link"></span></a>Lorem Ipsum</h3>
 
 <p>Lorem Ipsum is a module and binary for the Node.js platform. Use it to generate passages of lorem ipsum. Lorem ipsum is commonly used placeholder or filler text in publishing, graphic design, and web development.</p>
 
-<h3>Using the Module</h3>
+<h3>
+<a name="using-the-module" class="anchor" href="#using-the-module"><span class="octicon octicon-link"></span></a>Using the Module</h3>
 
 <p>Install the Lorem Ipsum module.</p>
 
@@ -50,17 +52,19 @@ npm install lorem-ipsum
 
 <div class="highlight"><pre><span class="p">...</span>
 <span class="nx">output</span> <span class="o">=</span> <span class="nx">loremIpsum</span><span class="p">({</span>
-    <span class="nx">count</span><span class="o">:</span> <span class="mi">1</span>                      <span class="c1">// # words, sentences, or paragraphs.</span>
-  <span class="p">,</span> <span class="nx">units</span><span class="o">:</span> <span class="s1">'sentences'</span>            <span class="c1">// Words, sentences, or paragraphs.</span>
+    <span class="nx">count</span><span class="o">:</span> <span class="mi">1</span>                      <span class="c1">// Number of words, sentences, or paragraphs to generate.</span>
+  <span class="p">,</span> <span class="nx">units</span><span class="o">:</span> <span class="s1">'sentences'</span>            <span class="c1">// Generate words, sentences, or paragraphs.</span>
   <span class="p">,</span> <span class="nx">sentenceLowerBound</span><span class="o">:</span> <span class="mi">5</span>         <span class="c1">// Minimum words per sentence.</span>
   <span class="p">,</span> <span class="nx">sentenceUpperBound</span><span class="o">:</span> <span class="mi">15</span>        <span class="c1">// Maximum words per sentence.</span>
   <span class="p">,</span> <span class="nx">paragraphLowerBound</span><span class="o">:</span> <span class="mi">3</span>        <span class="c1">// Minimum sentences per paragraph.</span>
   <span class="p">,</span> <span class="nx">paragraphUpperBound</span><span class="o">:</span> <span class="mi">7</span>        <span class="c1">// Maximum sentences per paragraph.</span>
-  <span class="p">,</span> <span class="nx">format</span><span class="o">:</span> <span class="s1">'plain'</span>               <span class="c1">// Plain text or html.</span>
+  <span class="p">,</span> <span class="nx">format</span><span class="o">:</span> <span class="s1">'plain'</span>               <span class="c1">// Plain text or html</span>
+  <span class="p">,</span> <span class="nx">random</span><span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span>           <span class="c1">// A PRNG function. Uses Math.random by default</span>
 <span class="p">});</span>
 </pre></div>
 
-<h3>Using the Binary</h3>
+<h3>
+<a name="using-the-binary" class="anchor" href="#using-the-binary"><span class="octicon octicon-link"></span></a>Using the Binary</h3>
 
 <p>Install the Lorem Ipsum module globally so that you can access the binary from anywhere.</p>
 
@@ -98,15 +102,28 @@ npm install lorem-ipsum
     <td>
 <strong>html</strong> or <strong>plain</strong> text format</td>
   </tr>
-</table><h3>Notes</h3>
+</table><p>You may now also use a short form when running Lorem Ipsum from the command line. Here's some examples:</p>
+
+<pre><code>lorem-ipsum 1 word
+</code></pre>
+
+<pre><code>lorem-ipsum 15 sentences --copy
+</code></pre>
+
+<pre><code>lorem-ipsum 5 paragraphs --copy --format html
+</code></pre>
+
+<h3>
+<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h3>
 
 <p>The copy feature requires that you have xclip installed if you are using Lorem Ipsum on Linux. The feature will work out of the box on Mac and Windows systems.</p>
 
-<h3>License</h3>
+<h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
 <p>This software is licensed under the MIT license.</p>
 
-<p>Copyright (c) 2012 Nickolas Kenyeres</p>
+<p>Copyright (c) 2012-2013 Nickolas Kenyeres</p>
 
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 
