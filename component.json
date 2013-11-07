@@ -1,0 +1,14 @@
+{
+  "name": "node-lorem-ipsum",
+  "repo": "knicklabs/node-lorem-ipsum",
+  "description": "A package for generating placeholder text using lorem ipsum",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "lib/generator.js",
+  "scripts": [
+    "lib/generator.js"
+  ]
+}
