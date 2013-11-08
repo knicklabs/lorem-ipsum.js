@@ -33,9 +33,9 @@ var loremIpsum = require('knicklabs-lorem-ipsum.js')
   , output     = loremIpsum();
 ```
 
-### Customizing the Output with Options
+### Customizing the Output with Options (Node.js/Component.js)
 
-You can pass options to the loremIpsum() function to fine-tune the output. See below.
+You can pass options to the loremIpsum() function to fine-tune the output. The API is the same on client and server. See below: 
 
 ```javascript
 ...
