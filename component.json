@@ -1,5 +1,5 @@
 {
-  "name": "node-lorem-ipsum",
+  "name": "lorem-ipsum.js",
   "repo": "knicklabs/lorem-ipsum.js",
   "description": "Generates passages of lorem ipsum text suitable for use as placeholder copy in web pages, graphics, and more.",
   "version": "0.0.1",
