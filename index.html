@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Lorem Ipsum by knicklabs</title>
+    <title>LoremIpsum.js by knicklabs</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -15,42 +15,60 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Lorem Ipsum</h1>
-        <p>A Node.js module and binary for generating lorem ipsum passages</p>
+        <h1>LoremIpsum.js</h1>
+        <p>A Node.js and Component.js module for generating lorem ipsum placeholder text</p>
 
-        <p class="view"><a href="https://github.com/knicklabs/node-lorem-ipsum">View the Project on GitHub <small>knicklabs/node-lorem-ipsum</small></a></p>
+        <p class="view"><a href="https://github.com/knicklabs/lorem-ipsum.js">View the Project on GitHub <small>knicklabs/lorem-ipsum.js</small></a></p>
 
 
         <ul>
-          <li><a href="https://github.com/knicklabs/node-lorem-ipsum/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/knicklabs/node-lorem-ipsum/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/knicklabs/node-lorem-ipsum">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/knicklabs/lorem-ipsum.js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/knicklabs/lorem-ipsum.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/knicklabs/lorem-ipsum.js">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
         <h3>
-<a name="lorem-ipsum" class="anchor" href="#lorem-ipsum"><span class="octicon octicon-link"></span></a>Lorem Ipsum</h3>
+<a name="loremipsumjs" class="anchor" href="#loremipsumjs"><span class="octicon octicon-link"></span></a>LoremIpsum.js</h3>
 
-<p>Lorem Ipsum is a module and binary for the Node.js platform. Use it to generate passages of lorem ipsum. Lorem ipsum is commonly used placeholder or filler text in publishing, graphic design, and web development.</p>
+<p>LoremIpsum.js is a Node.js and Component.js module for generating passages of lorem ipsum text. Lorem ipsum text is commonly used as placeholder text in publishing, graphic design, and web development.</p>
 
 <h3>
-<a name="using-the-module" class="anchor" href="#using-the-module"><span class="octicon octicon-link"></span></a>Using the Module</h3>
+<a name="using-the-module-nodejs" class="anchor" href="#using-the-module-nodejs"><span class="octicon octicon-link"></span></a>Using the Module (Node.js)</h3>
 
-<p>Install the Lorem Ipsum module.</p>
+<p>Install the LoremIpsum.js module to use the library in your server-side Node.js projects.</p>
 
-<div class="highlight"><pre><span class="nb">cd</span> ~/MyProject
+<div class="highlight highlight-bash"><pre><span class="nb">cd</span> ~/MyProject
 npm install lorem-ipsum
 </pre></div>
 
-<p>Require the Lorem Ipsum module in your script and use it to generate a passage of lorem ipsum.</p>
+<p>Require the LoremIpsum.js module and use it to generate a passage of lorem ipsum text.</p>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">loremIpsum</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'lorem-ipsum'</span><span class="p">)</span>
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">loremIpsum</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'lorem-ipsum'</span><span class="p">)</span>
   <span class="p">,</span> <span class="nx">output</span>     <span class="o">=</span> <span class="nx">loremIpsum</span><span class="p">();</span>
 </pre></div>
 
-<p>You can pass options to the loremIpsum() function to fine-tune the output. See below.</p>
+<h3>
+<a name="using-the-module-componentjs" class="anchor" href="#using-the-module-componentjs"><span class="octicon octicon-link"></span></a>Using the Module (Component.js)</h3>
 
-<div class="highlight"><pre><span class="p">...</span>
+<p>Install the LoremIpsum.js module to use the library client-side.</p>
+
+<div class="highlight highlight-bash"><pre><span class="nb">cd</span> ~/MyProject
+component install knicklabs/lorem-ipsum.js
+</pre></div>
+
+<p>Require the LoremIpsum.js module and use it to generate a passage of lorem ipsum text.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">loremIpsum</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'knicklabs-lorem-ipsum.js'</span><span class="p">)</span>
+  <span class="p">,</span> <span class="nx">output</span>     <span class="o">=</span> <span class="nx">loremIpsum</span><span class="p">();</span>
+</pre></div>
+
+<h3>
+<a name="customizing-the-output-with-options-nodejscomponentjs" class="anchor" href="#customizing-the-output-with-options-nodejscomponentjs"><span class="octicon octicon-link"></span></a>Customizing the Output with Options (Node.js/Component.js)</h3>
+
+<p>You can pass options to the loremIpsum() function to fine-tune the output. The API is the same on client and server. See below: </p>
+
+<div class="highlight highlight-javascript"><pre><span class="p">...</span>
 <span class="nx">output</span> <span class="o">=</span> <span class="nx">loremIpsum</span><span class="p">({</span>
     <span class="nx">count</span><span class="o">:</span> <span class="mi">1</span>                      <span class="c1">// Number of words, sentences, or paragraphs to generate.</span>
   <span class="p">,</span> <span class="nx">units</span><span class="o">:</span> <span class="s1">'sentences'</span>            <span class="c1">// Generate words, sentences, or paragraphs.</span>
@@ -64,19 +82,19 @@ npm install lorem-ipsum
 </pre></div>
 
 <h3>
-<a name="using-the-binary" class="anchor" href="#using-the-binary"><span class="octicon octicon-link"></span></a>Using the Binary</h3>
+<a name="using-the-cli-nodejs" class="anchor" href="#using-the-cli-nodejs"><span class="octicon octicon-link"></span></a>Using the CLI (Node.js)</h3>
 
-<p>Install the Lorem Ipsum module globally so that you can access the binary from anywhere.</p>
+<p>LoremIpsum.js includes a command line interface for generating passages of lorem ipsum text. Install the module globally to take advantage of this feature.</p>
 
-<div class="highlight"><pre>npm install lorem-ipsum --global
+<div class="highlight highlight-bash"><pre>npm install lorem-ipsum --global
 </pre></div>
 
-<p>Execute the statement <code>lorem-ipsum</code> on the command line to generate a passage of lorem ipsum. You can pass arguments to the program to fine-tune the output. See below.</p>
+<p>Execute the statement <code>lorem-ipsum</code> from your terminal to generate a passage of lorem ipsum text. You can pass arguments to the program to fine-tune the output.</p>
 
-<div class="highlight"><pre>lorem-ipsum --units words --count 100 --copy --format html
+<div class="highlight highlight-bash"><pre>lorem-ipsum --units words --count 100 --copy --format html
 </pre></div>
 
-<p>See below for a description of the arguments.</p>
+<p>See below for a description of the arguments to the program.</p>
 
 <table>
 <tr>
