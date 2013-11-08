@@ -1,39 +1,22 @@
-### LoremIpsum.js
+### Lorem Ipsum
 
-LoremIpsum.js is a Node.js and Component.js module for generating passages of lorem ipsum text. Lorem ipsum text is commonly used as placeholder text in publishing, graphic design, and web development.
+Lorem Ipsum is a module and binary for the Node.js platform. Use it to generate passages of lorem ipsum. Lorem ipsum is commonly used placeholder or filler text in publishing, graphic design, and web development.
 
-### Using the Module (Node.js)
+### Using the Module
 
-Install the LoremIpsum.js module to use the library in your server-side Node.js projects.
+Install the Lorem Ipsum module.
+
 ```bash
 cd ~/MyProject
 npm install lorem-ipsum
 ```
 
-Require the LoremIpsum.js module and use it to generate a passage of lorem ipsum text.
+Require the Lorem Ipsum module in your script and use it to generate a passage of lorem ipsum.
 
 ```javascript
 var loremIpsum = require('lorem-ipsum')
   , output     = loremIpsum();
 ```
-
-### Using the Module (Component.js)
-
-Install the LoremIpsum.js module to use the library client-side.
-
-```bash
-cd ~/MyProject
-component install knicklabs/lorem-ipsum.js
-```
-
-Require the LoremIpsum.js module and use it to generate a passage of lorem ipsum text.
-
-```javascript
-var loremIpsum = require('knicklabs-lorem-ipsum')
-  , output     = loremIpsum();
-```
-
-### Customizing the Output with Options
 
 You can pass options to the loremIpsum() function to fine-tune the output. See below.
 
@@ -51,21 +34,21 @@ output = loremIpsum({
 });
 ```
 
-### Using the CLI (Node.js)
+### Using the Binary
 
-LoremIpsum.js includes a command line interface for generating passages of lorem ipsum text. Install the module globally to take advantage of this feature.
+Install the Lorem Ipsum module globally so that you can access the binary from anywhere.
 
 ```bash
 npm install lorem-ipsum --global
 ```
 
-Execute the statement `lorem-ipsum` from your terminal to generate a passage of lorem ipsum text. You can pass arguments to the program to fine-tune the output.
+Execute the statement `lorem-ipsum` on the command line to generate a passage of lorem ipsum. You can pass arguments to the program to fine-tune the output. See below.
 
 ```bash
 lorem-ipsum --units words --count 100 --copy --format html
 ```
 
-See below for a description of the arguments to the program.
+See below for a description of the arguments.
 
 <table>
   <tr>
