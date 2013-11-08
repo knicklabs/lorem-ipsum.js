@@ -29,7 +29,7 @@ component install knicklabs/lorem-ipsum.js
 Require the LoremIpsum.js module and use it to generate a passage of lorem ipsum text.
 
 ```javascript
-var loremIpsum = require('knicklabs-lorem-ipsum')
+var loremIpsum = require('knicklabs-lorem-ipsum.js')
   , output     = loremIpsum();
 ```
 
