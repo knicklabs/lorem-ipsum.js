@@ -9,6 +9,7 @@
   "license": "MIT",
   "main": "lib/generator.js",
   "scripts": [
+    "lib/dictionary.js",
     "lib/generator.js"
   ]
 }
