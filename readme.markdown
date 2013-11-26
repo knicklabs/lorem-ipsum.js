@@ -47,6 +47,7 @@ output = loremIpsum({
   , paragraphLowerBound: 3        // Minimum sentences per paragraph.
   , paragraphUpperBound: 7        // Maximum sentences per paragraph.
   , format: 'plain'               // Plain text or html
+  , words: ['ad', 'dolor', ... ]  // Custom word dictionary. Uses dictionary.words (in lib/dictionary.js) by default.
   , random: Math.random           // A PRNG function. Uses Math.random by default
 });
 ```
