@@ -1,16 +1,17 @@
-### LoremIpsum.js
+### lorem-ipsum.js
 
-LoremIpsum.js is a Node.js and Component.js module for generating passages of lorem ipsum text. Lorem ipsum text is commonly used as placeholder text in publishing, graphic design, and web development.
+lorem-ipsum.js is a Node.js and Component.js module for generating passages of lorem ipsum text. Lorem ipsum text is commonly used as placeholder text in publishing, graphic design, and web development.
 
 ### Using the Module (Node.js)
 
-Install the LoremIpsum.js module to use the library in your server-side Node.js projects.
+Install the lorem-ipsum.js module to use the library in your server-side Node.js projects.
+
 ```bash
 cd ~/MyProject
 npm install lorem-ipsum
 ```
 
-Require the LoremIpsum.js module and use it to generate a passage of lorem ipsum text.
+Require the lorem-ipsum.js module and use it to generate a passage of lorem ipsum text.
 
 ```javascript
 var loremIpsum = require('lorem-ipsum')
@@ -19,14 +20,14 @@ var loremIpsum = require('lorem-ipsum')
 
 ### Using the Module (Component.js)
 
-Install the LoremIpsum.js module to use the library client-side.
+Install the lorem-ipsum.js module to use the library client-side.
 
 ```bash
 cd ~/MyProject
 component install knicklabs/lorem-ipsum.js
 ```
 
-Require the LoremIpsum.js module and use it to generate a passage of lorem ipsum text.
+Require the lorem-ipsum.js module and use it to generate a passage of lorem ipsum text.
 
 ```javascript
 var loremIpsum = require('knicklabs-lorem-ipsum.js')
@@ -55,7 +56,7 @@ output = loremIpsum({
 
 ### Using the CLI (Node.js)
 
-LoremIpsum.js includes a command line interface for generating passages of lorem ipsum text. Install the module globally to take advantage of this feature.
+lorem-ipsum.js includes a command line interface for generating passages of lorem ipsum text. Install the module globally to take advantage of this feature.
 
 ```bash
 npm install lorem-ipsum --global
@@ -92,7 +93,7 @@ See below for a description of the arguments to the program.
   </tr>
 </table>
 
-You may now also use a short form when running Lorem Ipsum from the command line. Here's some examples:
+You may now also use a short form when running lorem-ipsum.js from the command line. Here's some examples:
 
 ```
 lorem-ipsum 1 word
@@ -108,7 +109,7 @@ lorem-ipsum 5 paragraphs --copy --format html
 
 ### Notes
 
-The copy feature requires that you have xclip installed if you are using Lorem Ipsum on Linux. The feature will work out of the box on Mac and Windows systems.
+The copy feature requires that you have xclip installed if you are using lorem-ipsum.js on Linux. The feature will work out of the box on Mac and Windows systems.
 
 ### License
 
