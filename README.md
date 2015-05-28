@@ -49,6 +49,7 @@ output = loremIpsum({
   , format: 'plain'               // Plain text or html
   , words: ['ad', 'dolor', ... ]  // Custom word dictionary. Uses dictionary.words (in lib/dictionary.js) by default.
   , random: Math.random           // A PRNG function. Uses Math.random by default
+  , suffix: EOL                   // The character to insert between paragraphs. Defaults to default EOL for your OS.
 });
 ```
 
