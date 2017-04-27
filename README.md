@@ -1,6 +1,6 @@
 ### lorem-ipsum.js
 
-lorem-ipsum.js is a Node.js and Component.js module for generating passages of lorem ipsum text. Lorem ipsum text is commonly used as placeholder text in publishing, graphic design, and web development.
+lorem-ipsum.js is a Node.js, Component.js, and React Native module for generating passages of lorem ipsum text. Lorem ipsum text is commonly used as placeholder text in publishing, graphic design, and web development.
 
 ### Using the Module (Node.js)
 
