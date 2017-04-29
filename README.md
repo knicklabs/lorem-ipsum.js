@@ -30,7 +30,7 @@ component install knicklabs/lorem-ipsum.js
 Require the lorem-ipsum.js module and use it to generate a passage of lorem ipsum text.
 
 ```javascript
-var loremIpsum = require('knicklabs-lorem-ipsum.js')
+var loremIpsum = require('lorem-ipsum')
   , output     = loremIpsum();
 ```
 
