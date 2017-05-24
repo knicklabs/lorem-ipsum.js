@@ -18,7 +18,7 @@ if (nakedArguments.length >= 2) {
 options.units  = arguments.units || 'sentences';
 options.count  = arguments.count || 1;
 options.copy   = arguments.copy ? true : false;
-options.format = arguments.format || 'plain'; 
+options.format = arguments.format || 'plain';
 
 // Generate the lorem ipsum text and print it out.
 loremIpsum = generator(options);
