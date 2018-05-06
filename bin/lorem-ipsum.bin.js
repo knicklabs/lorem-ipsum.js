@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-var optimist   = require('optimist')
+var minimist   = require('minimist')
   , generator  = require('./../lib/generator')
   , clipper    = require('./../lib/clipper');
 
 var options    = {}
-  , arguments  = optimist.argv
+  , arguments  = minimist(process.argv.slice(2))
   , loremIpsum = '';
 
 // Allow CLI user to run command with plain english. E.g. "lorem-ipsum 1 sentence" or "lorem-ipsum 3 words --copy"
