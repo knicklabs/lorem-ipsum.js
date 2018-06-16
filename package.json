@@ -10,14 +10,14 @@
   },
   "devDependencies": {
     "alea": "0.0.9",
-    "nodeunit": "^0.11.0"
+    "mocha": "^5.2.0"
   },
   "optionalDependencies": {},
   "bin": {
     "lorem-ipsum": "bin/lorem-ipsum.bin.js"
   },
   "scripts": {
-    "test": "nodeunit test"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",

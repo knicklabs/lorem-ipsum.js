@@ -1,56 +1,9 @@
 /*
  * Series of unit tests to test randomness of output.
  */
-module.exports = {
-  setUp: function(callback) {
-    this.generator = require('./../lib/generator');
-    this.random = Math.random;
-    callback();
-  },
-
-  /*
-   * Test that using Math.random() gives us unique output.
-   */
-  testForUniqueOutput: function(test) {
-    test.notDeepEqual(generateWords(null), generateWords(null));
-    test.done();
-  },
-
-  /*
-   * Test that we can use a custom pseduo random number generator
-   * and still have unique output.
-   */
-  testForUniqueOutputWithCustomGenerator: function(test) {
-    var alea = new (require('alea'));
-
-    test.notDeepEqual(generateWords(alea), generateWords(alea));
-    test.done();
-  },
-
-  /*
-   * Test that we can create reproducible pseudo random output by
-   * seeding a custom PNRG.
-   */
-  testForReproducibleOutputWithCustomGenerator: function(test) {
-    var alea1 = new (require('alea'))('seed');
-    var alea2 = new (require('alea'))('seed');
-
-    test.deepEqual(generateWords(alea1), generateWords(alea2));
-    test.done();
-  },
-
-  /*
-   * Test that we can create pseudo random output by using unique
-   * seeds for a custom PNRG.
-   */
-  testForUniqueOutputWithCustomGeneratorWithUniqueSeeds: function(test) {
-    var alea1 = new (require('alea'))('seed');
-    var alea2 = new (require('alea'))('different-seed');
-
-    test.notDeepEqual(generateWords(alea1), generateWords(alea2));
-    test.done();
-  }
-};
+var assert = require('assert');
+var generator = require('../lib/generator');
+var random = Math.random;
 
 /*
  * Helpers
@@ -69,3 +22,28 @@ function generateWords(random) {
 
   return words.join(', ');
 }
+
+describe('generator', function() {
+  it('should give us unique output using Math.random()', function() {
+    assert.notEqual(generateWords(null), generateWords(null));
+  });
+
+  it('should use a custom pseudo random number generator and still have unique output', function() {
+    var alea = new (require('alea'));
+    assert.notEqual(generateWords(alea), generateWords(alea));
+  });
+
+  it('should create reproducible pseudo random output by seeding a custom PNRG', function() {
+    var alea1 = new (require('alea'))('seed');
+    var alea2 = new (require('alea'))('seed');
+
+    assert.equal(generateWords(alea1), generateWords(alea2));
+  });
+
+  it('should create pseudo random output by using unique seeds for a custom PNRG', function () {
+    var alea1 = new (require('alea'))('seed');
+    var alea2 = new (require('alea'))('different-seed');
+
+    assert.notEqual(generateWords(alea1), generateWords(alea2));
+  });
+});
