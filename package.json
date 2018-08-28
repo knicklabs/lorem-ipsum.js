@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git://github.com/knicklabs/node-lorem-ipsum.git"
   },
+  "scripts": {
+    "lint:check": "tslint -c tslint.json src/**/*.ts"
+  },
   "keywords": [
     "lorem",
     "ipsum",
@@ -19,5 +22,18 @@
   "engines": {
     "node": ">= 8.x",
     "npm": ">= 5.x"
-  }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "prettier": "^1.14.2",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1",
+    "webpack": "^4.17.1"
+  },
+  "dependencies": {}
 }
