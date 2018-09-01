@@ -8,8 +8,11 @@
     "type": "git",
     "url": "git://github.com/knicklabs/node-lorem-ipsum.git"
   },
+  "bin": {
+    "lorem-ipsum": "dist/bin/lorem-ipsum.bin.js"
+  },
   "scripts": {
-    "bundle": "webpack",
+    "build": "webpack",
     "lint:check": "tslint -c tslint.json src/**/*.ts"
   },
   "keywords": [

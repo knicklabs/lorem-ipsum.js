@@ -9,7 +9,7 @@ const PATHS = {
 module.exports = {
   entry: {
     "dist/index": `${PATHS.SRC}/index`,
-    "dist/bin/lorem-ipsum": `${PATHS.SRC}/bin/lorem-ipsum.bin`,
+    "dist/bin/lorem-ipsum.bin": `${PATHS.SRC}/bin/lorem-ipsum.bin`,
   },
 
   mode: "development",
@@ -24,7 +24,7 @@ module.exports = {
   resolve: {
     extensions: ["!.spec.ts", ".ts", ".tsx", ".js", ".json"],
   },
-
+  target: "node",
   module: {
     rules: [
       {
@@ -45,4 +45,8 @@ module.exports = {
       raw: true,
     }),
   ],
+  node: {
+    child_process: "empty",
+    fs: "empty",
+  },
 };

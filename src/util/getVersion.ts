@@ -1,5 +1,11 @@
+import fs from "fs";
+
+/**
+ * @returns  The package version.
+ */
 const getVersion = (): string => {
-  return process.env.npm_package_version || "unknown";
+  const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
+  return pkg.version || "unknown";
 };
 
 export default getVersion;
