@@ -58,3 +58,5 @@ const loremIpsum = ({
 };
 
 export default loremIpsum;
+
+export { LoremIpsum };
