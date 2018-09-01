@@ -1,7 +1,7 @@
 import { isReactNative } from "./";
 
 describe("isReactNative", () => {
-  const cachedNavigator = global.navigator;
+  const cachedNavigator: any = (global as any).navigator;
 
   const setNavigator = (navigator?: any) => {
     Object.defineProperty(global, "navigator", {
