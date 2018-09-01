@@ -3,13 +3,13 @@ const webpack = require("webpack");
 
 const PATHS = {
   SRC: "./src",
-  DIST: path.resolve(__dirname)
+  DIST: path.resolve(__dirname),
 };
 
 module.exports = {
   entry: {
     "dist/index": `${PATHS.SRC}/index`,
-    "dist/bin/lorem-ipsum": `${PATHS.SRC}/bin/lorem-ipsum`
+    "dist/bin/lorem-ipsum": `${PATHS.SRC}/bin/lorem-ipsum.bin`,
   },
 
   mode: "development",
@@ -18,11 +18,11 @@ module.exports = {
     path: PATHS.DIST,
     filename: "[name].js",
     library: "lorem-ipsum",
-    libraryTarget: "umd"
+    libraryTarget: "umd",
   },
 
   resolve: {
-    extensions: ["!.spec.ts", ".ts", ".tsx", ".js", ".json"]
+    extensions: ["!.spec.ts", ".ts", ".tsx", ".js", ".json"],
   },
 
   module: {
@@ -30,19 +30,19 @@ module.exports = {
       {
         test: /\.(tsx?)|(js)$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
-      }
-    ]
+        loader: "babel-loader",
+      },
+    ],
   },
   plugins: [
     new webpack.BannerPlugin({
       banner: conf => {
-        if (conf.filename === "dist/bin/lorem-ipsum.js") {
+        if (conf.filename === "dist/bin/lorem-ipsum.bin.js") {
           return "#!/usr/bin/env node";
         }
         return "";
       },
-      raw: true
-    })
-  ]
+      raw: true,
+    }),
+  ],
 };

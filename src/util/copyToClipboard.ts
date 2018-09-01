@@ -1,7 +1,7 @@
 import { exec } from "child_process";
 import { getCopyCommand, getPlatform, isSupportedPlatform } from ".";
 
-const copyToClipboard = async (text: string): Promise<string> => {
+const copyToClipboard = (text: string): Promise<string> => {
   return new Promise(
     (resolve: (text: string) => void, reject: (error: Error) => void) => {
       try {
