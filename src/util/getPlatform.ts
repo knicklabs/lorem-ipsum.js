@@ -1,10 +1,12 @@
+import { CANNOT_DETERMINE_PLATFORM } from "../constants/errors";
+
 /**
  * @returns  The process platform.
  * @throws
  */
 const getPlatform = (): string => {
   if (!process || typeof process.platform !== "string") {
-    throw new Error("Could not determine host operating system.");
+    throw new Error(CANNOT_DETERMINE_PLATFORM);
   }
   return process.platform;
 };

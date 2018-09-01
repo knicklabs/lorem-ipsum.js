@@ -3,7 +3,7 @@
  */
 const isReactNative = (): boolean => {
   return (
-    typeof navigator !== "undefined" && typeof navigator.product !== "undefined"
+    typeof navigator !== "undefined" && navigator.product === "ReactNative"
   );
 };
 

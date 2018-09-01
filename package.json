@@ -13,7 +13,8 @@
   },
   "scripts": {
     "build": "webpack",
-    "lint:check": "tslint -c tslint.json src/**/*.ts"
+    "lint:check": "tslint -c tslint.json src/**/*.ts",
+    "test": "jest"
   },
   "keywords": [
     "lorem",
@@ -33,12 +34,15 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
+    "@types/jest": "^23.3.1",
     "@types/node": "^10.9.3",
     "@types/random-seed": "^0.3.3",
     "@types/react-native": "^0.56.15",
     "babel-loader": "^8.0.0",
     "clean-webpack-plugin": "^0.1.19",
+    "jest": "^23.5.0",
     "prettier": "^1.14.2",
+    "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",
     "typescript": "^3.0.1",
     "webpack": "^4.17.1",
@@ -47,5 +51,19 @@
   "dependencies": {
     "commander": "^2.17.1",
     "random-seed": "^0.3.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
