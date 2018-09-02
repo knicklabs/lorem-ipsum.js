@@ -1,27 +1,23 @@
 {
   "name": "lorem-ipsum",
-  "version": "1.0.6",
+  "version": "2.0.0-alpha.1",
   "description": "Generates passages of lorem ipsum text suitable for use as placeholder copy in web pages, graphics, and more. Works in the browser, NodeJS, and React Native.",
   "author": "Nickolas Kenyeres <nkenyeres@gmail.com> (http://knicklabs.github.com)",
-  "license": "MIT",
-  "main": "./lib/generator",
-  "dependencies": {
-    "minimist": "~1.2.0"
-  },
-  "devDependencies": {
-    "alea": "0.0.9",
-    "mocha": "^5.2.0"
-  },
-  "optionalDependencies": {},
-  "bin": {
-    "lorem-ipsum": "bin/lorem-ipsum.bin.js"
-  },
-  "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
-  },
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git://github.com/knicklabs/node-lorem-ipsum.git"
+  },
+  "bin": {
+    "lorem-ipsum": "dist/bin/lorem-ipsum.bin.js"
+  },
+  "scripts": {
+    "build": "webpack",
+    "lint:check": "tslint -c tslint.json src/**/*.ts",
+    "test": "jest --coverage",
+    "release": "yarn build && release-it",
+    "release:dry": "yarn build && release-it --dry-run",
+    "coverage": "nyc report --temp-directory=coverage --reporter-text-lcov | coveralls"
   },
   "keywords": [
     "lorem",
@@ -31,7 +27,54 @@
     "dummy",
     "filler"
   ],
-  "engine": {
-    "node": ">=0.4"
+  "engines": {
+    "node": ">= 8.x",
+    "npm": ">= 5.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "@types/jest": "^23.3.1",
+    "@types/node": "^10.9.3",
+    "@types/random-seed": "^0.3.3",
+    "@types/react-native": "^0.56.15",
+    "babel-loader": "^8.0.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "coveralls": "^3.0.2",
+    "jest": "^23.5.0",
+    "nock-exec": "^0.1.0",
+    "nyc": "^13.0.1",
+    "prettier": "^1.14.2",
+    "release-it": "^7.6.0",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "commander": "^2.17.1",
+    "random-seed": "^0.3.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts}",
+      "!src/bin/**/*.{ts}"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }

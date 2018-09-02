@@ -1,124 +1,138 @@
-### lorem-ipsum.js
+# lorem-ipsum
 
-lorem-ipsum.js is a Node.js, Component.js, and React Native module for generating passages of lorem ipsum text. Lorem ipsum text is commonly used as placeholder text in publishing, graphic design, and web development.
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b55bd2bc24764915adde9b0e74223045)](https://www.codacy.com/app/knicklabs/lorem-ipsum.js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knicklabs/lorem-ipsum.js&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/knicklabs/lorem-ipsum.js.svg?branch=master)](https://travis-ci.org/knicklabs/lorem-ipsum.js) [![Coverage Status](https://coveralls.io/repos/github/knicklabs/lorem-ipsum.js/badge.svg?branch=master)](https://coveralls.io/github/knicklabs/lorem-ipsum.js?branch=master) [![npm version](https://badge.fury.io/js/lorem-ipsum.svg)](https://badge.fury.io/js/lorem-ipsum) ![dependencies](https://david-dm.org/knicklabs/lorem-ipsum.js.svg) ![node](https://img.shields.io/badge/node-8x-blue.svg) ![npm](https://img.shields.io/badge/npm-5x-blue.svg)
 
-### Using the Module (Node.js)
+`lorem-ipsum` is a JavaScript module for generating passages of lorem
+ipsum text. Lorem ipsum text is commonly used as placeholder text in
+publishing, graphic design, and web development.
 
-Install the lorem-ipsum.js module to use the library in your server-side Node.js projects.
+`lorem-ipsum` is compatible with the browser, Node.JS, and React Native.
 
-```bash
-cd ~/MyProject
-npm install lorem-ipsum
+## Using the Class
+
+The class is the recommended way to use `lorem-ipsum` since version 2.
+It makes it simpler to generate text using the same options.
+
 ```
+import { LoremIpsum } from "lorem-ipsum";
 
-Require the lorem-ipsum.js module and use it to generate a passage of lorem ipsum text.
-
-```javascript
-var loremIpsum = require('lorem-ipsum')
-  , output     = loremIpsum();
-```
-
-### Using the Module (Component.js)
-
-Install the lorem-ipsum.js module to use the library client-side.
-
-```bash
-cd ~/MyProject
-component install knicklabs/lorem-ipsum.js
-```
-
-Require the lorem-ipsum.js module and use it to generate a passage of lorem ipsum text.
-
-```javascript
-var loremIpsum = require('knicklabs-lorem-ipsum.js')
-  , output     = loremIpsum();
-```
-
-### Customizing the Output with Options (Node.js/Component.js)
-
-You can pass options to the loremIpsum() function to fine-tune the output. The API is the same on client and server. See below:
-
-```javascript
-...
-output = loremIpsum({
-    count: 1                      // Number of words, sentences, or paragraphs to generate.
-  , units: 'sentences'            // Generate words, sentences, or paragraphs.
-  , sentenceLowerBound: 5         // Minimum words per sentence.
-  , sentenceUpperBound: 15        // Maximum words per sentence.
-  , paragraphLowerBound: 3        // Minimum sentences per paragraph.
-  , paragraphUpperBound: 7        // Maximum sentences per paragraph.
-  , format: 'plain'               // Plain text or html
-  , words: ['ad', 'dolor', ... ]  // Custom word dictionary. Uses dictionary.words (in lib/dictionary.js) by default.
-  , random: Math.random           // A PRNG function. Uses Math.random by default
-  , suffix: EOL                   // The character to insert between paragraphs. Defaults to default EOL for your OS.
+const lorem = new LoremIpsum({
+  sentencesPerParagraph: {
+    max: 8,
+    min: 4
+  },
+  wordsPerSentence: {
+    max: 16,
+    min: 4
+  }
 });
+
+lorem.generateWords(1);
+lorem.generateSentences(5);
+lorem.generateParagraphs(7);
 ```
 
-### Using the CLI (Node.js)
+## Using the Function
 
-lorem-ipsum.js includes a command line interface for generating passages of lorem ipsum text. Install the module globally to take advantage of this feature.
-
-```bash
-npm install lorem-ipsum --global
-```
-
-Execute the statement `lorem-ipsum` from your terminal to generate a passage of lorem ipsum text. You can pass arguments to the program to fine-tune the output.
-
-```bash
-lorem-ipsum --units words --count 100 --copy --format html
-```
-
-See below for a description of the arguments to the program.
-
-<table>
-  <tr>
-    <th>Argument</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>--count</td>
-    <td>The <strong>number</strong> of words, sentences or paragraphs to generate</td>
-  </tr>
-  <tr>
-    <td>--units</td>
-    <td>Generate <strong>words</strong>, <strong>sentences</strong> or <strong>paragraphs</strong></td>
-  </tr>
-  <tr>
-    <td>--copy</td>
-    <td><strong>Copy</strong> the output to the system clipboard</td>
-  </tr>
-  <tr>
-    <td>--format</td>
-    <td><strong>html</strong> or <strong>plain</strong> text format</td>
-  </tr>
-</table>
-
-You may now also use a short form when running lorem-ipsum.js from the command line. Here's some examples:
+`lorem-ipsum` version 2 exports a default function that is backwards-
+compatible with the default function exported by `lorem-ipsum` version
+1. Users of version 1 should be able to upgrade to version 2 without 
+any issue; they can just continue using this library as they did before.
 
 ```
+import lorem from "lorem-ipsum";
+
+lorem(); // generates one sentence
+```
+
+Like before, you can pass in a number of options to customize the output.
+The example below shows the default options.
+
+```
+import lorem from "lorem-ipsum";
+
+lorem({
+  count: 1,                // Number of "words", "sentences", or "paragraphs"
+  format: "plain",         // "plain" or "html"
+  paragraphLowerBound: 3,  // Min. number of sentences per paragraph.
+  paragraphUpperBound: 7,  // Max. number of sentences per paragarph.
+  random: Math.random,     // A PRNG function
+  sentenceLowerBound: 5,   // Min. number of words per sentence.
+  sentenceUpperBound: 15,  // Max. number of words per sentence.
+  suffix: "\n",            // Line ending, defaults to "\n" or "\r\n" (win32)
+  units: "sentences",      // paragraph(s), "sentence(s)", or "word(s)"
+  words: ["ad", ...]       // Array of words to draw from
+})
+```
+
+## Using the CLI
+
+`lorem-ipsum` includes a command line interface (CLI) program for generating 
+passages of lorem ipsum text directly from your terminal. This CLI program 
+is compatible with Mac OSX, Windows, and Linux. On Linux you will need to 
+install xclip. On Ubuntu: `apt-get install xclip`.
+
+Simply install the module globally to take advantage of this feature.
+
+```
+npm i -g lorem-ipsum
+```
+
+Execute the statement `lorem-ipsum [count] [units]` from your terminal to
+generate a passage of lorem ipsum text. You can additional arguments to
+the program.
+
+```
+lorem-ipsum --version
+# Displays the version number
+
+lorem-ipsum --help
+# Displays the help documentation
+
 lorem-ipsum 1 word
-```
+# Prints one word
 
-```
-lorem-ipsum 15 sentences --copy
-```
+lorem-ipsum 2 words
+# Prints two words
 
-```
-lorem-ipsum 5 paragraphs --copy --format html
-```
+lorem-ipsum 1 sentence
+# Prints one sentence
 
-### Notes
+lorem-ipsum 2 sentences
+# Prints two sentences
 
-The copy feature requires that you have xclip installed if you are using lorem-ipsum.js on Linux. The feature will work out of the box on Mac and Windows systems.
+lorem-ipsum 1 paragraph
+# Prints one paragraph
 
-### License
+lorem-ipsum 2 paragraphs
+# Prints two paragraphs
 
-This software is licensed under the MIT license.
+lorem-ipsum 2 paragraphs --copy
+# Prints two pargraphs and copies it to your clipboard
 
-Copyright (c) 2012-2018 Nickolas Kenyeres
+lorem-ipsum 2 pargraphs --format html
+# Prints two paragraphs in HTML format
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+lorem-ipsum 2 paragraphs --format html --copy
+# Prints two paragraphs in HTML format and copies it to your clipboard.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Uprading from version 1.x? The `--count` and `--units` options have been 
+dropped in favor of the natural language interface shown in the examples
+above.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## License
+
+Copyright (c) 2012-2018 Nickolas Kenyeres <nickolas@knicklabs.com>
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
