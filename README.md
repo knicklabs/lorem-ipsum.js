@@ -54,7 +54,7 @@ any issue; they can just continue using this library as they did before.
 import { loremIpsum } from "lorem-ipsum";
 // const loremIpsum = require("lorem-ipsum").loremIpsum;
 
-lorem(); // generates one sentence
+loremIpsum(); // generates one sentence
 ```
 
 Like before, you can pass in a number of options to customize the output.
