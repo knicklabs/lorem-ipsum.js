@@ -1,17 +1,19 @@
 language: node_js
 node_js:
+  - "10"
   - "8"
 
 cache:
-  yarn: true
   directories:
     - node_modules
 
-install:
-  - npm install --no-progress
+before_script:
+  - npm uninstall typescript --no-save
+  - npm uninstall tslint --no-save
+  - npm install
 
 script:
-  - npm test
+  - npm run test
 
 after_success:
   - npm run coverage
