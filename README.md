@@ -16,6 +16,7 @@ It makes it simpler to generate text using the same options.
 
 ```
 import { LoremIpsum } from "lorem-ipsum";
+// const LoremIpsum = require("lorem-ipsum").LoremIpsum;
 
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
@@ -41,7 +42,8 @@ compatible with the default function exported by `lorem-ipsum` version
 any issue; they can just continue using this library as they did before.
 
 ```
-import lorem from "lorem-ipsum";
+import { loremIpsum } from "lorem-ipsum";
+// const loremIpsum = require("lorem-ipsum").loremIpsum;
 
 lorem(); // generates one sentence
 ```
@@ -116,6 +118,7 @@ lorem-ipsum 2 pargraphs --format html
 
 lorem-ipsum 2 paragraphs --format html --copy
 # Prints two paragraphs in HTML format and copies it to your clipboard.
+```
 
 Uprading from version 1.x? The `--count` and `--units` options have been 
 dropped in favor of the natural language interface shown in the examples
