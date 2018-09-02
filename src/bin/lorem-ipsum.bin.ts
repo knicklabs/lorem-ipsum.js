@@ -1,5 +1,5 @@
 import program from "commander";
-import loremIpsum from "..";
+import { loremIpsum } from "..";
 import { DESCRIPTION, USAGE } from "../constants/cli";
 import { FORMAT_PLAIN } from "../constants/formats";
 import { REGEX } from "../constants/regex";

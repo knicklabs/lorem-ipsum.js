@@ -57,6 +57,4 @@ const loremIpsum = ({
   }
 };
 
-export default loremIpsum;
-
-export { LoremIpsum };
+export { loremIpsum, LoremIpsum };

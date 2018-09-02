@@ -18,6 +18,8 @@ module.exports = {
   output: {
     path: PATHS.DIST,
     filename: "[name].js",
+    library: "loremIpsum",
+    libraryTarget: "umd",
   },
 
   resolve: {
