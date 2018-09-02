@@ -1,4 +1,4 @@
-const cleanWebpackPlugin = require("clean-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
 
@@ -36,7 +36,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new cleanWebpackPlugin("dist"),
+    new CleanWebpackPlugin("dist"),
     new webpack.BannerPlugin({
       banner: conf => {
         if (conf.filename === "dist/bin/lorem-ipsum.bin.js") {
