@@ -1,4 +1,4 @@
-import loremIpsum from ".";
+import { loremIpsum } from ".";
 import ProcessHelper from "../test/util/ProcessHelper";
 import { LINE_ENDINGS } from "./constants/lineEndings";
 import { SUPPORTED_PLATFORMS as PLATFORMS } from "./constants/platforms";
