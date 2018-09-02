@@ -61,9 +61,9 @@ Like before, you can pass in a number of options to customize the output.
 The example below shows the default options.
 
 ```
-import lorem from "lorem-ipsum";
+import { loremIpsum } from "lorem-ipsum";
 
-lorem({
+loremIpsum({
   count: 1,                // Number of "words", "sentences", or "paragraphs"
   format: "plain",         // "plain" or "html"
   paragraphLowerBound: 3,  // Min. number of sentences per paragraph.
