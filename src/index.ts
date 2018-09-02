@@ -26,7 +26,7 @@ const loremIpsum = ({
   units = "sentences",
   words = WORDS,
   suffix = "",
-}: ILoremIpsumParams): string => {
+}: ILoremIpsumParams = {}): string => {
   const options = {
     random,
     sentencesPerParagraph: {

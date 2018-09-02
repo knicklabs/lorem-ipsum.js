@@ -8,6 +8,14 @@ describe("loremIpsum", () => {
 
   afterEach(() => process.resetPlatform());
 
+  test("Should return one sentence by default", () => {
+    const result = loremIpsum();
+    expect(result.slice(-1)).toEqual(".");
+
+    const sentences = result.split(". ");
+    expect(sentences).toHaveLength(1);
+  });
+
   test("Should return the specified number of paragraphs", () => {
     process.setPlatform(PLATFORMS.WIN32);
     const count = 5;
@@ -34,5 +42,9 @@ describe("loremIpsum", () => {
       const words = results.split(" ");
       expect(words).toHaveLength(count);
     });
+  });
+
+  test("Should return any empty string for invalid units", () => {
+    expect(loremIpsum({ count: 7, units: "unknown" })).toEqual("");
   });
 });
