@@ -18,11 +18,11 @@ export interface IMath {
 }
 
 export interface IGeneratorOptions {
-  sentencesPerParagraph: IBounds;
-  wordsPerSentence: IBounds;
+  sentencesPerParagraph?: IBounds;
+  wordsPerSentence?: IBounds;
   random?: IPrng;
   seed?: string;
-  words: string[];
+  words?: string[];
 }
 
 class Generator {
@@ -37,19 +37,21 @@ class Generator {
     random,
     seed,
     words = WORDS,
-  }: IGeneratorOptions) {
+  }: IGeneratorOptions = {}) {
     if (sentencesPerParagraph.min > sentencesPerParagraph.max) {
-      throw new Error(`Minimum number of sentences per paragraph (${
-        sentencesPerParagraph.min
-      })
-         cannot exceed maximum (${sentencesPerParagraph.max}).`);
+      throw new Error(
+        `Minimum number of sentences per paragraph (${
+          sentencesPerParagraph.min
+        }) cannot exceed maximum (${sentencesPerParagraph.max}).`,
+      );
     }
 
     if (wordsPerSentence.min > wordsPerSentence.max) {
-      throw new Error(`Minimum number of words per sentence (${
-        wordsPerSentence.min
-      })
-         cannot exceed maximum (${wordsPerSentence.max}).`);
+      throw new Error(
+        `Minimum number of words per sentence (${
+          wordsPerSentence.min
+        }) cannot exceed maximum (${wordsPerSentence.max}).`,
+      );
     }
 
     this.sentencesPerParagraph = sentencesPerParagraph;
