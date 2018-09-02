@@ -1,4 +1,4 @@
-import isNode from "./isNode";
+import { isNode } from ".";
 
 describe("isNode", () => {
   test("should return true if executing in NodeJS", () => {

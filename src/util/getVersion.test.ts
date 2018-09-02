@@ -1,5 +1,5 @@
 import fs from "fs";
-import getVersion from "./getVersion";
+import { getVersion } from ".";
 
 const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
 

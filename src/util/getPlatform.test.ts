@@ -1,6 +1,6 @@
+import { getPlatform } from ".";
 import { CANNOT_DETERMINE_PLATFORM } from "../constants/errors";
 import { SUPPORTED_PLATFORMS as PLATFORMS } from "../constants/platforms";
-import getPlatform from "./getPlatform";
 
 describe("getPlatform", () => {
   const cachedPlatform = process.platform;

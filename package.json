@@ -41,6 +41,7 @@
     "babel-loader": "^8.0.0",
     "clean-webpack-plugin": "^0.1.19",
     "jest": "^23.5.0",
+    "nock-exec": "^0.1.0",
     "prettier": "^1.14.2",
     "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",
