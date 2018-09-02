@@ -5,7 +5,7 @@ import fs from "fs";
  */
 const getVersion = (): string => {
   const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
-  return pkg.version || "unknown";
+  return pkg.version;
 };
 
 export default getVersion;

@@ -4,7 +4,7 @@ import { makeArrayOfLength } from ".";
  * @returns       An array of strings of length "x".
  */
 const makeArrayOfStrings = (
-  length: number = 0,
+  length: number,
   makeString: () => string,
 ): string[] => {
   const arr = makeArrayOfLength(length);

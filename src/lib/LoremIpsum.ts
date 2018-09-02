@@ -47,15 +47,15 @@ class LoremIpsum {
     return strings.map((str) => this.formatString(str));
   }
 
-  public generateWords(num: number): string {
+  public generateWords(num?: number): string {
     return this.formatString(this.generator.generateRandomWords(num));
   }
 
-  public generateSentences(num: number): string {
+  public generateSentences(num?: number): string {
     return this.formatString(this.generator.generateRandomParagraph(num));
   }
 
-  public generateParagraphs(num: number): string {
+  public generateParagraphs(num?: number): string {
     const makeString = this.generator.generateRandomParagraph.bind(
       this.generator,
     );

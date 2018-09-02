@@ -16,6 +16,7 @@ const copyToClipboard = (text: string): Promise<string> => {
         }
         const command = `echo "${text}" | ${getCopyCommand(platform)}`;
         exec(command, (error, stdout, stderr) => {
+          /* istanbul ignore if */
           if (error) {
             return reject(error);
           }
