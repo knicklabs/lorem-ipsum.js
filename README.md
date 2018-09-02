@@ -1,5 +1,8 @@
 # lorem-ipsum
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b55bd2bc24764915adde9b0e74223045)](https://www.codacy.com/app/knicklabs/lorem-ipsum.js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knicklabs/lorem-ipsum.js&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/knicklabs/lorem-ipsum.js.svg?branch=master)](https://travis-ci.org/knicklabs/lorem-ipsum.js) [![Coverage Status](https://coveralls.io/repos/github/knicklabs/lorem-ipsum.js/badge.svg?branch=master)](https://coveralls.io/github/knicklabs/lorem-ipsum.js?branch=master) [![npm version](https://badge.fury.io/js/%40knicklabs%2Florem-ipsum.js.svg)](https://badge.fury.io/js/%40knicklabs%2Florem-ipsum.js) ![dependencies](https://david-dm.org/knicklabs/lorem-ipsum.js.svg) ![node](https://img.shields.io/badge/node-8x-blue.svg) ![npm](https://img.shields.io/badge/npm-5x-blue.svg)
+
 `lorem-ipsum` is a JavaScript module for generating passages of lorem
 ipsum text. Lorem ipsum text is commonly used as placeholder text in
 publishing, graphic design, and web development.

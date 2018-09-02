@@ -1,0 +1,17 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/docs
+#/dist
+
+# misc
+.DS_Store
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

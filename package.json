@@ -14,7 +14,10 @@
   "scripts": {
     "build": "webpack",
     "lint:check": "tslint -c tslint.json src/**/*.ts",
-    "test": "jest"
+    "test": "jest --coverage",
+    "release": "yarn build && release-it",
+    "release:dry": "yarn build && release-it --dry-run",
+    "coverage": "nyc report --temp-directory=coverage --reporter-text-lcov | coveralls"
   },
   "keywords": [
     "lorem",
@@ -40,9 +43,12 @@
     "@types/react-native": "^0.56.15",
     "babel-loader": "^8.0.0",
     "clean-webpack-plugin": "^0.1.19",
+    "coveralls": "^3.0.2",
     "jest": "^23.5.0",
     "nock-exec": "^0.1.0",
+    "nyc": "^13.0.1",
     "prettier": "^1.14.2",
+    "release-it": "^7.6.0",
     "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",
     "typescript": "^3.0.1",
@@ -54,6 +60,10 @@
     "random-seed": "^0.3.0"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts}",
+      "!src/bin/**/*.{ts}"
+    ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
