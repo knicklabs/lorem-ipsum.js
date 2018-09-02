@@ -9,13 +9,13 @@ class LoremIpsum {
   public suffix?: string;
 
   constructor(
-    options: IGeneratorOptions,
+    options: IGeneratorOptions = {},
     format: string = FORMAT_PLAIN,
-    suffix: string,
+    suffix?: string,
   ) {
     if (FORMATS.indexOf(format.toLowerCase()) === -1) {
       throw new Error(
-        `${format} is an invalid format. Please us ${FORMATS.join(" or ")}.`,
+        `${format} is an invalid format. Please use ${FORMATS.join(" or ")}.`,
       );
     }
 
@@ -55,7 +55,7 @@ class LoremIpsum {
     return this.formatString(this.generator.generateRandomParagraph(num));
   }
 
-  public generateParagraphs(num?: number): string {
+  public generateParagraphs(num: number): string {
     const makeString = this.generator.generateRandomParagraph.bind(
       this.generator,
     );
