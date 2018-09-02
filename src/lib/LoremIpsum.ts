@@ -1,6 +1,6 @@
 import { FORMAT_HTML, FORMAT_PLAIN, FORMATS } from "../constants/formats";
 import { LINE_ENDINGS } from "../constants/lineEndings";
-import Generator, { IGeneratorOptions, IPrng } from "../lib/generator";
+import Generator, { IGeneratorOptions } from "../lib/generator";
 import { isNode, isReactNative, isWindows, makeArrayOfStrings } from "../util";
 
 class LoremIpsum {

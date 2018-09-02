@@ -32,8 +32,8 @@ class Generator {
   public words: string[];
 
   constructor({
-    sentencesPerParagraph = { min: 3, max: 7 },
-    wordsPerSentence = { min: 5, max: 15 },
+    sentencesPerParagraph = { max: 7, min: 3 },
+    wordsPerSentence = { max: 15, min: 5 },
     random,
     seed,
     words = WORDS,
