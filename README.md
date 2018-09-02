@@ -15,7 +15,7 @@ publishing, graphic design, and web development.
 ## Installation
 
 ```
-npm i lorem-ipsum@2.0.0-alpha.1
+npm i lorem-ipsum@2.0.0-alpha.2
 ```
 
 ## Using the Class
@@ -87,7 +87,7 @@ install xclip. On Ubuntu: `apt-get install xclip`.
 Simply install the module globally to take advantage of this feature.
 
 ```
-npm i -g lorem-ipsum@2.0.0-alpha.1
+npm i -g lorem-ipsum@2.0.0-alpha.2
 ```
 
 Execute the statement `lorem-ipsum [count] [units]` from your terminal to

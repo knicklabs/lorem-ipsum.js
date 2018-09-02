@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git://github.com/knicklabs/node-lorem-ipsum.git"
   },
+  "main": "dist/index",
   "bin": {
     "lorem-ipsum": "dist/bin/lorem-ipsum.bin.js"
   },
