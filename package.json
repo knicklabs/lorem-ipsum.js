@@ -15,9 +15,9 @@
     "build": "webpack",
     "lint:check": "tslint -c tslint.json src/**/*.ts",
     "test": "jest --coverage",
+    "test:coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "release": "yarn build && release-it",
-    "release:dry": "yarn build && release-it --dry-run",
-    "coverage": "nyc report --temp-directory=coverage --reporter-text-lcov | coveralls"
+    "release:dry": "yarn build && release-it --dry-run"
   },
   "keywords": [
     "lorem",
@@ -62,7 +62,9 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{ts}",
-      "!src/bin/**/*.{ts}"
+      "!src/bin/**/*.ts",
+      "!src/constants/cli.ts",
+      "!src/@types/**/*.d.ts"
     ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"

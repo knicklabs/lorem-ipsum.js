@@ -1,8 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
   - "8"
-  - "6"
 
 cache:
   directories:
@@ -14,10 +12,7 @@ before_script:
   - npm install
 
 script:
-  - npm test
-
-after_success:
-  - npm run coverage
+  - npm run test:coverage
 
 branches:
   only:
