@@ -1,11 +1,9 @@
 import fs from "fs";
+import { version } from '../../package.json'
 
 /**
  * @returns  The package version.
  */
-const getVersion = (): string => {
-  const pkg = JSON.parse(fs.readFileSync(`${__dirname}/../../package.json`, "utf8"));
-  return pkg.version;
-};
+const getVersion = (): string => version
 
 export default getVersion;
