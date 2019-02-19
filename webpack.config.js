@@ -18,8 +18,6 @@ module.exports = {
   output: {
     path: PATHS.DIST,
     filename: "[name].js",
-    library: "loremIpsum",
-    libraryTarget: "umd",
   },
 
   resolve: {
@@ -51,4 +49,5 @@ module.exports = {
     child_process: "empty",
     fs: "empty",
   },
+  devtool: 'source-map',
 };
