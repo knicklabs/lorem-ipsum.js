@@ -2,10 +2,9 @@ import Generator from "./generator";
 
 describe("generator", () => {
   let generator: Generator;
-  const seed = "ABC123";
 
   beforeEach(() => {
-    generator = new Generator({ seed });
+    generator = new Generator();
   });
 
   test("Should throw an error if instantiated with non-sensical paragraph bounds", () => {
@@ -45,24 +44,6 @@ describe("generator", () => {
     expect(generator.random).toEqual(random);
   });
 
-  test("Should use a seeded generator", () => {
-    let random = generator.random;
-    const instance1 = {
-      firstResult: random(),
-      secondResult: random(),
-    };
-
-    generator = new Generator({ seed });
-    random = generator.random;
-    const instance2 = {
-      firstResult: random(),
-      secondResult: random(),
-    };
-
-    expect(instance1.firstResult).toEqual(instance2.firstResult);
-    expect(instance1.secondResult).toEqual(instance2.secondResult);
-  });
-
   describe("generateRandomInteger", () => {
     test("Should generate an exact number given an equal min and max", () => {
       expect(generator.generateRandomInteger(7, 7)).toEqual(7);
@@ -89,7 +70,6 @@ describe("generator", () => {
       const min = 2;
       const max = 4;
       generator = new Generator({
-        seed,
         wordsPerSentence: { max, min },
       });
       for (let i = 0; i < 100; i++) {
@@ -116,7 +96,6 @@ describe("generator", () => {
       const min = 3;
       const max = 5;
       generator = new Generator({
-        seed,
         wordsPerSentence: { max, min },
       });
       for (let i = 0; i < 100; i++) {
@@ -138,7 +117,6 @@ describe("generator", () => {
       const min = 14;
       const max = 16;
       generator = new Generator({
-        seed,
         sentencesPerParagraph: { max, min },
       });
       for (let i = 0; i < 100; i++) {

@@ -1,4 +1,3 @@
-import randomSeed from "random-seed";
 import { WORDS } from "../constants/words";
 import { capitalize, makeArrayOfLength } from "../util";
 
@@ -60,8 +59,6 @@ class Generator {
 
     if (random) {
       this.random = random;
-    } else if (seed) {
-      this.random = randomSeed.create(seed).random;
     } else {
       this.random = Math.random;
     }
