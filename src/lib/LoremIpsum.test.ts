@@ -6,7 +6,6 @@ import LoremIpsum from "./LoremIpsum";
 
 describe("LoremIpsum", () => {
   const process = new ProcessHelper();
-  const seed = "xyz789";
 
   afterEach(() => process.resetPlatform());
 
@@ -102,7 +101,6 @@ describe("LoremIpsum", () => {
       const max = 5;
       const min = 3;
       const lorem = new LoremIpsum({
-        seed,
         wordsPerSentence: { max, min },
       });
       for (let i = 0; i < 100; i++) {
@@ -126,7 +124,6 @@ describe("LoremIpsum", () => {
       const max = 19;
       const min = 16;
       const lorem = new LoremIpsum({
-        seed,
         sentencesPerParagraph: { max, min },
       });
       for (let i = 0; i < 100; i++) {
