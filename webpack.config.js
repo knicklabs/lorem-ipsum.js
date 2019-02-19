@@ -13,6 +13,8 @@ module.exports = {
     "dist/bin/lorem-ipsum.bin": `${PATHS.SRC}/bin/lorem-ipsum.bin`,
   },
 
+  library: "loremIpsum",
+  libraryTarget: "umd",
   mode: "development",
 
   output: {
@@ -49,5 +51,5 @@ module.exports = {
     child_process: "empty",
     fs: "empty",
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
 };
