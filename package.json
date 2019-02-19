@@ -16,8 +16,8 @@
     "build": "webpack",
     "lint:check": "tslint -c tslint.json src/**/*.ts",
     "test": "jest --coverage",
-    "release": "npm build && release-it",
-    "release:dry": "npm build && release-it --dry-run",
+    "release": "npm run build && release-it",
+    "release:dry": "npm run build && release-it --dry-run",
     "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov"
   },
   "keywords": [
