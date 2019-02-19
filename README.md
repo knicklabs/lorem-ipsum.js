@@ -15,7 +15,7 @@ publishing, graphic design, and web development.
 ## Installation
 
 ```
-npm i lorem-ipsum@2.0.0-alpha.2
+npm i lorem-ipsum@2.0.0-alpha.3
 ```
 
 ## Using the Class
@@ -135,7 +135,7 @@ above.
 
 ## License
 
-Copyright (c) 2012-2018 Nickolas Kenyeres <nickolas@knicklabs.com>
+Copyright (c) 2012-2019 Nickolas Kenyeres <nickolas@knicklabs.com>
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
