@@ -1,6 +1,6 @@
 {
   "name": "lorem-ipsum",
-  "version": "2.0.0-alpha.11",
+  "version": "2.0.0-alpha.12",
   "description": "Generates passages of lorem ipsum text suitable for use as placeholder copy in web pages, graphics, and more. Works in the browser, NodeJS, and React Native.",
   "author": "Nickolas Kenyeres <nkenyeres@gmail.com> (http://knicklabs.github.com)",
   "license": "ISC",
@@ -17,7 +17,8 @@
     "type-check": "tsc --noEmit",
     "build:types": "rm -rf types && tsc --emitDeclarationOnly",
     "build:js": "rm -rf dist && babel src --ignore '**/*.test.ts' --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
-    "build": "npm run build:types && npm run build:js",
+    "build:exec": "sed -i '1i #!/usr/bin/env node' dist/bin/lorem-ipsum.bin.js",
+    "build": "npm run build:types && npm run build:js && npm run build:exec"cl,
     "lint:check": "tslint -c tslint.json src/**/*.ts",
     "test": "jest --coverage",
     "release": "npm run build && release-it",
