@@ -15,7 +15,7 @@ publishing, graphic design, and web development.
 ## Installation
 
 ```
-npm i lorem-ipsum@2.0.0-alpha.7
+npm i lorem-ipsum@2.0.0-alpha.10
 ```
 
 ## Using the Class
