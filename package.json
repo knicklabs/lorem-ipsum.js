@@ -18,7 +18,7 @@
     "build:types": "rm -rf types && tsc --emitDeclarationOnly",
     "build:js": "rm -rf dist && babel src --ignore '**/*.test.ts' --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
     "build:exec": "sed -i '1i #!/usr/bin/env node' dist/bin/lorem-ipsum.bin.js",
-    "build": "npm run build:types && npm run build:js && npm run build:exec"cl,
+    "build": "npm run build:types && npm run build:js && npm run build:exec",
     "lint:check": "tslint -c tslint.json src/**/*.ts",
     "test": "jest --coverage",
     "release": "npm run build && release-it",
