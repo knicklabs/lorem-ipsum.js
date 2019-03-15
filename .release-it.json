@@ -2,5 +2,6 @@
   "src": {
     "tagName": "v%s"
   },
-  "requireCleanWorkingDir": false
+  "requireCleanWorkingDir": false,
+  "git.requireUpstream": false
 }
