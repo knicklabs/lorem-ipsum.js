@@ -4,7 +4,7 @@
  */
 const makeArrayOfLength = (length: number = 0): number[] => {
   return Array.apply(null, Array(length)).map(
-    (item: void, index: number): number => index,
+    (item: any, index: number): number => index,
   );
 };
 

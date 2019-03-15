@@ -12,8 +12,12 @@
   "bin": {
     "lorem-ipsum": "dist/bin/lorem-ipsum.bin.js"
   },
+  "types": "types/index.d.ts",
   "scripts": {
-    "build": "webpack",
+    "type-check": "tsc --noEmit",
+    "build:types": "rm -rf types && tsc --emitDeclarationOnly",
+    "build:js": "rm -rf dist && babel src --ignore '**/*.test.ts' --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "build": "npm run build:types && npm run build:js",
     "lint:check": "tslint -c tslint.json src/**/*.ts",
     "test": "jest --coverage",
     "release": "npm run build && release-it",
@@ -33,17 +37,16 @@
     "npm": ">= 5.x"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "@babel/plugin-proposal-class-properties": "^7.3.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-typescript": "^7.0.0",
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-typescript": "^7.1.0",
     "@types/jest": "^23.3.1",
     "@types/node": "^10.9.3",
     "@types/random-seed": "^0.3.3",
-    "@types/react-native": "^0.56.15",
     "babel-loader": "^8.0.0",
-    "clean-webpack-plugin": "^0.1.19",
     "coveralls": "^3.0.2",
     "jest": "^24.1.0",
     "nock-exec": "^0.1.0",
@@ -52,9 +55,7 @@
     "release-it": "^10.1.0",
     "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",
-    "typescript": "^3.0.1",
-    "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0"
+    "typescript": "^3.2.2"
   },
   "dependencies": {
     "commander": "^2.17.1"
