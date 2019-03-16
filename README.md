@@ -7,7 +7,7 @@ THIS README IS FOR VERSION 2. SWITCH TO `1-STABLE` BRANCH FOR THE
 VERSION 1 DOCUMENTATION.
 
 IF YOU NEED COMPATIBILITY WITH OLDER VERSIONS OF NODEJS, PLEASE USE V1.0.6 WHICH IS 
-COMPATIBLE BACK TO NODE 0.8. `npm i lorem-ipsum@1.0.6`
+COMPATIBLE BACK TO NODE 0.4. `npm i lorem-ipsum@1.0.6`
 
 `lorem-ipsum` is a JavaScript module for generating passages of lorem
 ipsum text. Lorem ipsum text is commonly used as placeholder text in
