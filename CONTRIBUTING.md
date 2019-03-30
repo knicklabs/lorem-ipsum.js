@@ -4,7 +4,7 @@ Pull requests are welcome for bug fixes, new features, and supporting new platfo
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT). By participating, you are expected to uphold this code. Please report unacceptable behavior to nickolas@knicklabs.com.
+This project and everyone participating in it is governed by the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to nickolas@knicklabs.com.
 
 ## How to Contribute
 
