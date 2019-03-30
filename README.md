@@ -90,7 +90,7 @@ install xclip. On Ubuntu: `apt-get install xclip`.
 Simply install the module globally to take advantage of this feature.
 
 ```
-npm i -g lorem-ipsum@2.0.0-alpha.2
+npm i -g lorem-ipsum
 ```
 
 Execute the statement `lorem-ipsum [count] [units]` from your terminal to

@@ -1,10 +1,9 @@
 import program from "commander";
 import { loremIpsum } from "..";
-import { DESCRIPTION, USAGE } from "../constants/cli";
 import { FORMAT_PLAIN } from "../constants/formats";
 import { REGEX } from "../constants/regex";
-import copyToClipboard from "../util/copyToClipboard";
-import getVersion from "../util/getVersion";
+import { DESCRIPTION, USAGE } from "./constants/cli";
+import { copyToClipboard, getVersion } from "./util";
 
 program
   .version(getVersion())

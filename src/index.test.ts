@@ -1,7 +1,7 @@
 import { loremIpsum } from ".";
 import ProcessHelper from "../test/util/ProcessHelper";
 import { LINE_ENDINGS } from "./constants/lineEndings";
-import { SUPPORTED_PLATFORMS as PLATFORMS } from "./constants/platforms";
+import { SUPPORTED_PLATFORMS } from "./constants/platforms";
 
 describe("loremIpsum", () => {
   const process = new ProcessHelper();
@@ -17,7 +17,7 @@ describe("loremIpsum", () => {
   });
 
   test("Should return the specified number of paragraphs", () => {
-    process.setPlatform(PLATFORMS.WIN32);
+    process.setPlatform(SUPPORTED_PLATFORMS.WIN32);
     const count = 5;
     ["paragraphs", "paragraph"].forEach((units) => {
       const results = loremIpsum({ count, units });
