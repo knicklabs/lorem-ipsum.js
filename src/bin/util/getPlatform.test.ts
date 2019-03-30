@@ -1,6 +1,6 @@
 import { getPlatform } from ".";
+import { SUPPORTED_PLATFORMS } from "../../constants/platforms";
 import { CANNOT_DETERMINE_PLATFORM } from "../constants/errors";
-import { SUPPORTED_PLATFORMS as PLATFORMS } from "../../constants/platforms";
 
 describe("getPlatform", () => {
   const cachedPlatform = process.platform;
@@ -26,7 +26,7 @@ describe("getPlatform", () => {
   });
 
   test("Should return the platform", () => {
-    Object.values(PLATFORMS).forEach((platform: string) => {
+    Object.values(SUPPORTED_PLATFORMS).forEach((platform: string) => {
       setPlatform(platform);
       expect(getPlatform()).toEqual(platform);
     });

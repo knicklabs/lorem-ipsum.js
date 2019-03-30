@@ -1,9 +1,9 @@
 import program from "commander";
-import { copyToClipboard, getVersion } from './util'
 import { loremIpsum } from "..";
-import { DESCRIPTION, USAGE } from "./constants/cli";
 import { FORMAT_PLAIN } from "../constants/formats";
 import { REGEX } from "../constants/regex";
+import { DESCRIPTION, USAGE } from "./constants/cli";
+import { copyToClipboard, getVersion } from "./util";
 
 program
   .version(getVersion())

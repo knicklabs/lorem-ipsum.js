@@ -8,9 +8,7 @@ export interface IBounds {
 
 export type IPrng = () => number;
 
-export interface ISeedRandom {
-  new (seed?: string): IPrng;
-}
+export type ISeedRandom = new (seed?: string) => IPrng;
 
 export interface IMath {
   seedrandom: ISeedRandom;

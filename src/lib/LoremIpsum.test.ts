@@ -1,7 +1,7 @@
 import ProcessHelper from "../../test/util/ProcessHelper";
 import { FORMAT_HTML, FORMAT_PLAIN, FORMATS } from "../constants/formats";
 import { LINE_ENDINGS } from "../constants/lineEndings";
-import { SUPPORTED_PLATFORMS as PLATFORMS } from "../constants/platforms";
+import { SUPPORTED_PLATFORMS } from "../constants/platforms";
 import LoremIpsum from "./LoremIpsum";
 
 describe("LoremIpsum", () => {
@@ -24,13 +24,13 @@ describe("LoremIpsum", () => {
   describe("getLineEnding", () => {
     test("Should return WIN32 line ending on WIN32", () => {
       const lorem = new LoremIpsum();
-      process.setPlatform(PLATFORMS.WIN32);
+      process.setPlatform(SUPPORTED_PLATFORMS.WIN32);
       expect(lorem.getLineEnding()).toEqual(LINE_ENDINGS.WIN32);
     });
 
     test("Should return POSIX line ending on Mac or Linux", () => {
       const lorem = new LoremIpsum();
-      [PLATFORMS.DARWIN, PLATFORMS.LINUX].forEach((platform) => {
+      [SUPPORTED_PLATFORMS.DARWIN, SUPPORTED_PLATFORMS.LINUX].forEach((platform) => {
         process.setPlatform(platform);
         expect(lorem.getLineEnding()).toEqual(LINE_ENDINGS.POSIX);
       });
@@ -137,7 +137,7 @@ describe("LoremIpsum", () => {
 
   describe("generateParagraphs", () => {
     it("should generate a specific number of paragraphs", () => {
-      process.setPlatform(PLATFORMS.WIN32);
+      process.setPlatform(SUPPORTED_PLATFORMS.WIN32);
       const lorem = new LoremIpsum();
       const results = lorem.generateParagraphs(3);
       const paragraphs = results.split(LINE_ENDINGS.WIN32);

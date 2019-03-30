@@ -1,5 +1,5 @@
 import { isWindows } from ".";
-import { SUPPORTED_PLATFORMS as PLATFORMS } from "../constants/platforms";
+import { SUPPORTED_PLATFORMS } from "../constants/platforms";
 
 describe("isWindows", () => {
   const cachedPlatform = process.platform;
@@ -13,12 +13,12 @@ describe("isWindows", () => {
   afterEach(() => setPlatform(cachedPlatform));
 
   test("Should return false if not running on Windows", () => {
-    setPlatform(PLATFORMS.DARWIN);
+    setPlatform(SUPPORTED_PLATFORMS.DARWIN);
     expect(isWindows()).toEqual(false);
   });
 
   test("Should return true if running on Windows", () => {
-    setPlatform(PLATFORMS.WIN32);
+    setPlatform(SUPPORTED_PLATFORMS.WIN32);
     expect(isWindows()).toEqual(true);
   });
 });

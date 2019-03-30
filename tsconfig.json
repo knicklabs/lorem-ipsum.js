@@ -58,13 +58,13 @@
 
     /* Advanced Options */
     "declarationDir": "types",                /* Output directory for generated declaration files. */
-    "resolveJsonModule":                      true,
+    "resolveJsonModule":                      true
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
     "node_modules",
-    "**/*.test.ts",
+    "**/*.test.ts"
   ]
 }

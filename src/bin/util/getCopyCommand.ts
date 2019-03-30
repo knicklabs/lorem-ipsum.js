@@ -1,5 +1,5 @@
+import { SUPPORTED_PLATFORMS } from "../../constants/platforms";
 import { COPY } from "../constants/commands";
-import { SUPPORTED_PLATFORMS as PLATFORMS } from "../../constants/platforms";
 
 /**
  * @param platform  The process platform.
@@ -7,11 +7,11 @@ import { SUPPORTED_PLATFORMS as PLATFORMS } from "../../constants/platforms";
  */
 const getCopyCommand = (platform: string = ""): string => {
   switch (platform.toLowerCase()) {
-    case PLATFORMS.DARWIN:
+    case SUPPORTED_PLATFORMS.DARWIN:
       return COPY.DARWIN;
-    case PLATFORMS.WIN32:
+    case SUPPORTED_PLATFORMS.WIN32:
       return COPY.WIN32;
-    case PLATFORMS.LINUX:
+    case SUPPORTED_PLATFORMS.LINUX:
     default:
       return COPY.LINUX;
   }
