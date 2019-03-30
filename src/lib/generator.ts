@@ -54,12 +54,7 @@ class Generator {
     this.sentencesPerParagraph = sentencesPerParagraph;
     this.words = words;
     this.wordsPerSentence = wordsPerSentence;
-
-    if (random) {
-      this.random = random;
-    } else {
-      this.random = Math.random;
-    }
+    this.random = random || Math.random;
   }
 
   public generateRandomInteger(min: number, max: number): number {
