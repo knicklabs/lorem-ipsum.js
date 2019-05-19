@@ -4,13 +4,13 @@ import LoremIpsum from "./lib/LoremIpsum";
 
 export interface ILoremIpsumParams {
   count?: number;
-  format?: 'plain' | 'html';
+  format?: "plain" | "html";
   paragraphLowerBound?: number;
   paragraphUpperBound?: number;
   random?: IPrng;
   sentenceLowerBound?: number;
   sentenceUpperBound?: number;
-  units?: 'words' | 'word' | 'sentences' | 'sentence' | 'paragraphs' | 'paragraph';
+  units?: "words" | "word" | "sentences" | "sentence" | "paragraphs" | "paragraph";
   words?: string[];
   suffix?: string;
 }
