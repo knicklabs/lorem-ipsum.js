@@ -1,26 +1,21 @@
-import { FORMAT_HTML, FORMAT_PLAIN, FORMATS } from "../constants/formats";
+import { FORMAT_HTML, FORMAT_PLAIN, FORMATS, LoremFormat } from "../constants/formats";
 import { LINE_ENDINGS } from "../constants/lineEndings";
 import Generator, { IGeneratorOptions } from "../lib/generator";
 import { isNode, isReactNative, isWindows, makeArrayOfStrings } from "../util";
 
 class LoremIpsum {
   public generator: Generator;
-  public format: string;
-  public suffix?: string;
 
   constructor(
     options: IGeneratorOptions = {},
-    format: string = FORMAT_PLAIN,
-    suffix?: string,
+    public format: LoremFormat = FORMAT_PLAIN,
+    public suffix?: string,
   ) {
     if (FORMATS.indexOf(format.toLowerCase()) === -1) {
       throw new Error(
         `${format} is an invalid format. Please use ${FORMATS.join(" or ")}.`,
       );
     }
-
-    this.format = format.toLowerCase();
-    this.suffix = suffix;
     this.generator = new Generator(options);
   }
 

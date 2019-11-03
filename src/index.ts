@@ -1,10 +1,11 @@
+import { LoremFormat } from "./constants/formats";
 import { WORDS } from "./constants/words";
 import { IPrng } from "./lib/generator";
 import LoremIpsum from "./lib/LoremIpsum";
 
 export interface ILoremIpsumParams {
   count?: number;
-  format?: "plain" | "html";
+  format?: LoremFormat;
   paragraphLowerBound?: number;
   paragraphUpperBound?: number;
   random?: IPrng;
