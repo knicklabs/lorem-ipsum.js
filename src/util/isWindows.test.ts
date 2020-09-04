@@ -21,4 +21,9 @@ describe("isWindows", () => {
     setPlatform(SUPPORTED_PLATFORMS.WIN32);
     expect(isWindows()).toEqual(true);
   });
+
+  test("Should return true if running on undefined", () => {
+    setPlatform(undefined);
+    expect(isWindows()).toEqual(false);
+  });
 });
