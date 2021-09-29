@@ -11,7 +11,10 @@ program
   .command(`[count] [units]`, DESCRIPTION)
   .option("-c --copy", "Copy")
   .option("-f --format <format>", "Format", REGEX.FORMATS, FORMAT_PLAIN)
-  .action((num: string = "1", units: "words" | "word" | "sentences" | "sentence" | "paragraphs" | "paragraph" | undefined = "sentence") => {
+  .action((
+    num: string = "1",
+    units: "words" | "word" | "sentences" | "sentence" | "paragraphs" | "paragraph" | undefined = "sentence",
+  ) => {
     if (REGEX.UNITS.test(units) === false) {
       // tslint:disable-next-line:no-console
       console.error(
