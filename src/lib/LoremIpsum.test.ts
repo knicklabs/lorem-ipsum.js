@@ -12,6 +12,7 @@ describe("LoremIpsum", () => {
   test("Should throw an error if instantiated with an unsupported format", () => {
     try {
       /* tslint:disable-next-line:no-unused-variable */
+      // @ts-ignore
       const lorem = new LoremIpsum({}, "blade");
     } catch (error) {
       expect(error).toBeDefined();

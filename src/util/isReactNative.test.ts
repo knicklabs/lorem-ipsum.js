@@ -1,17 +1,16 @@
 import { isReactNative } from "./";
 
 describe("isReactNative", () => {
-  const cachedProduct = navigator.product;
+  // @ts-ignore
+  const cachedNavigator = global.navigator;
 
-  const setNavigator = (product?: any) => {
-    Object.defineProperty(navigator, "product", {
-      value: product,
-      writable: true,
-    });
+  const setNavigator = (obj: any) => {
+    // @ts-ignore
+    global.navigator = obj;
   };
 
   afterEach(() => {
-    setNavigator(cachedProduct);
+    setNavigator(cachedNavigator);
   });
 
   test("should return false if not in React Native", () => {
@@ -20,7 +19,7 @@ describe("isReactNative", () => {
   });
 
   test("should return true if in React Native", () => {
-    setNavigator("ReactNative");
+    setNavigator({ product: "ReactNative" });
     expect(isReactNative()).toEqual(true);
   });
 });

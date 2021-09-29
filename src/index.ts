@@ -1,4 +1,13 @@
-import { LoremFormat } from "./constants/formats";
+import { LoremFormat, FORMAT_PLAIN } from "./constants/formats";
+import {
+  LoremUnit,
+  UNIT_PARAGRAPH,
+  UNIT_PARAGRAPHS,
+  UNIT_SENTENCES,
+  UNIT_SENTENCE,
+  UNIT_WORDS,
+  UNIT_WORD,
+} from "./constants/units";
 import { WORDS } from "./constants/words";
 import { IPrng } from "./lib/generator";
 import LoremIpsum from "./lib/LoremIpsum";
@@ -11,20 +20,20 @@ export interface ILoremIpsumParams {
   random?: IPrng;
   sentenceLowerBound?: number;
   sentenceUpperBound?: number;
-  units?: "words" | "word" | "sentences" | "sentence" | "paragraphs" | "paragraph";
+  units?: LoremUnit;
   words?: string[];
   suffix?: string;
 }
 
 const loremIpsum = ({
   count = 1,
-  format = "plain",
+  format = FORMAT_PLAIN,
   paragraphLowerBound = 3,
   paragraphUpperBound = 7,
   random,
   sentenceLowerBound = 5,
   sentenceUpperBound = 15,
-  units = "sentences",
+  units = UNIT_SENTENCES,
   words = WORDS,
   suffix = "",
 }: ILoremIpsumParams = {}): string => {
@@ -44,14 +53,14 @@ const loremIpsum = ({
   const lorem: LoremIpsum = new LoremIpsum(options, format, suffix);
 
   switch (units) {
-    case "paragraphs":
-    case "paragraph":
+    case UNIT_PARAGRAPHS:
+    case UNIT_PARAGRAPH:
       return lorem.generateParagraphs(count);
-    case "sentences":
-    case "sentence":
+    case UNIT_SENTENCES:
+    case UNIT_SENTENCE:
       return lorem.generateSentences(count);
-    case "words":
-    case "word":
+    case UNIT_WORDS:
+    case UNIT_WORD:
       return lorem.generateWords(count);
     default:
       return "";
