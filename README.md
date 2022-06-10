@@ -1,7 +1,7 @@
 # lorem-ipsum
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a0984231f0ac46efa617cf401964f8b6)](https://www.codacy.com/gh/knicklabs/lorem-ipsum.js/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knicklabs/lorem-ipsum.js&amp;utm_campaign=Badge_Grade)
-[![Build Status](https://travis-ci.org/knicklabs/lorem-ipsum.js.svg?branch=main)](https://travis-ci.org/knicklabs/lorem-ipsum.js) [![Coverage Status](https://coveralls.io/repos/github/knicklabs/lorem-ipsum.js/badge.svg?branch=main)](https://coveralls.io/github/knicklabs/lorem-ipsum.js?branch=main) [![npm version](https://badge.fury.io/js/lorem-ipsum.svg)](https://badge.fury.io/js/lorem-ipsum) ![node](https://img.shields.io/badge/node-8x-blue.svg) ![npm](https://img.shields.io/badge/npm-5x-blue.svg)
+[![Coverage Status](https://coveralls.io/repos/github/knicklabs/lorem-ipsum.js/badge.svg?branch=main)](https://coveralls.io/github/knicklabs/lorem-ipsum.js?branch=main) [![npm version](https://badge.fury.io/js/lorem-ipsum.svg)](https://badge.fury.io/js/lorem-ipsum) ![node](https://img.shields.io/badge/node-8x-blue.svg) ![npm](https://img.shields.io/badge/npm-5x-blue.svg)
 
 ## Overview
 

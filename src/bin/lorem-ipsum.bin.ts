@@ -1,6 +1,6 @@
-import program from "commander";
+import { Option, program } from "commander";
 import { loremIpsum } from "..";
-import { FORMAT_PLAIN } from "../constants/formats";
+import { FORMATS, FORMAT_PLAIN } from "../constants/formats";
 import { REGEX } from "../constants/regex";
 import { DESCRIPTION, USAGE } from "./constants/cli";
 import { copyToClipboard, getVersion } from "./util";
@@ -8,9 +8,11 @@ import { copyToClipboard, getVersion } from "./util";
 program
   .version(getVersion())
   .usage(USAGE)
-  .command(`[count] [units]`, DESCRIPTION)
+  .description(DESCRIPTION)
+  .argument('count', 'The number of units')
+  .argument('units', 'Words, sentences, or paragraphs')
   .option("-c --copy", "Copy")
-  .option("-f --format <format>", "Format", REGEX.FORMATS, FORMAT_PLAIN)
+  .addOption(new Option("-f --format <format>", "Format").choices(FORMATS).default(FORMAT_PLAIN))
   .action((
     num: string = "1",
     units: "words" | "word" | "sentences" | "sentence" | "paragraphs" | "paragraph" | undefined = "sentence",
@@ -32,14 +34,14 @@ program
 
     const output = loremIpsum({
       count,
-      format: program.format,
+      format: program.getOptionValue('format'),
       units,
     });
 
     // tslint:disable-next-line:no-console
     console.log(output);
 
-    if (program.copy === true) {
+    if (program.getOptionValue('copy') === true) {
       copyToClipboard(output)
         .then(() => {
           // tslint:disable-next-line:no-console
