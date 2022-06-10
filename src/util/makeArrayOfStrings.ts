@@ -1,4 +1,4 @@
-import { makeArrayOfLength } from ".";
+import makeArrayOfLength from "./makeArrayOfLength";
 /**
  * @param length  Length "x".
  * @returns       An array of strings of length "x".
