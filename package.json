@@ -54,7 +54,7 @@
     "jest": "^28.1.1",
     "nock-exec": "^0.1.0",
     "nyc": "^15.1.0",
-    "prettier": "^1.14.2",
+    "prettier": "^2.6.2",
     "release-it": "^15.0.0",
     "ts-jest": "^28.0.4",
     "tslint": "^6.1.3",
