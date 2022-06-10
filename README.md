@@ -1,19 +1,25 @@
 # lorem-ipsum
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a0984231f0ac46efa617cf401964f8b6)](https://www.codacy.com/gh/knicklabs/lorem-ipsum.js/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knicklabs/lorem-ipsum.js&amp;utm_campaign=Badge_Grade)
-[![Build Status](https://travis-ci.org/knicklabs/lorem-ipsum.js.svg?branch=master)](https://travis-ci.org/knicklabs/lorem-ipsum.js) [![Coverage Status](https://coveralls.io/repos/github/knicklabs/lorem-ipsum.js/badge.svg?branch=master)](https://coveralls.io/github/knicklabs/lorem-ipsum.js?branch=master) [![npm version](https://badge.fury.io/js/lorem-ipsum.svg)](https://badge.fury.io/js/lorem-ipsum) ![dependencies](https://david-dm.org/knicklabs/lorem-ipsum.js.svg) ![node](https://img.shields.io/badge/node-8x-blue.svg) ![npm](https://img.shields.io/badge/npm-5x-blue.svg)
+[![Build Status](https://travis-ci.org/knicklabs/lorem-ipsum.js.svg?branch=master)](https://travis-ci.org/knicklabs/lorem-ipsum.js) [![Coverage Status](https://coveralls.io/repos/github/knicklabs/lorem-ipsum.js/badge.svg?branch=master)](https://coveralls.io/github/knicklabs/lorem-ipsum.js?branch=master) [![npm version](https://badge.fury.io/js/lorem-ipsum.svg)](https://badge.fury.io/js/lorem-ipsum) ![node](https://img.shields.io/badge/node-8x-blue.svg) ![npm](https://img.shields.io/badge/npm-5x-blue.svg)
 
-THIS README IS FOR VERSION 2. SWITCH TO `1-STABLE` BRANCH FOR THE
-VERSION 1 DOCUMENTATION.
+## Overview
 
-IF YOU NEED COMPATIBILITY WITH OLDER VERSIONS OF NODEJS, PLEASE USE V1.0.6 WHICH IS 
-COMPATIBLE BACK TO NODE 0.4. `npm i lorem-ipsum@1.0.6`
+🎉 __Celebrating 10 years of `lorem-ipsum`__ 🎉
 
 `lorem-ipsum` is a JavaScript module for generating passages of lorem
 ipsum text. Lorem ipsum text is commonly used as placeholder text in
 publishing, graphic design, and web development.
 
 `lorem-ipsum` is compatible with the browser, Node.JS, and React Native.
+
+## Important Notes
+
+THIS README IS FOR VERSION 2. SWITCH TO `1-STABLE` BRANCH FOR THE
+VERSION 1 DOCUMENTATION.
+
+IF YOU NEED COMPATIBILITY WITH OLDER VERSIONS OF NODEJS, PLEASE USE V1.0.6 WHICH IS 
+COMPATIBLE BACK TO NODE 0.4. `npm i lorem-ipsum@1.0.6`
 
 ## Installation
 
@@ -138,7 +144,7 @@ above.
 
 ## License
 
-Copyright (c) 2012-2020 Nickolas Kenyeres <nickolas@knicklabs.com>
+Copyright (c) 2012-2022 Nickolas Kenyeres <nickolas@knicklabs.com>
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
