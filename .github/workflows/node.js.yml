@@ -42,9 +42,6 @@ jobs:
     - name: Run test coverage
       run: npm run coverage:dry
       
-    - name: Run build
-      run: npm run build
-      
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
