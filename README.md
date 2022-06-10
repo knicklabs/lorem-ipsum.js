@@ -5,6 +5,8 @@
 
 ## Overview
 
+🎉 __Celebrating 10 years of `lorem-ipsum`__ 🎉
+
 `lorem-ipsum` is a JavaScript module for generating passages of lorem
 ipsum text. Lorem ipsum text is commonly used as placeholder text in
 publishing, graphic design, and web development.
