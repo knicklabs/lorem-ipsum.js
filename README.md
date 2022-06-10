@@ -138,7 +138,7 @@ above.
 
 ## License
 
-Copyright (c) 2012-2020 Nickolas Kenyeres <nickolas@knicklabs.com>
+Copyright (c) 2012-2022 Nickolas Kenyeres <nickolas@knicklabs.com>
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
