@@ -32,7 +32,7 @@ npm i lorem-ipsum
 The class is the recommended way to use `lorem-ipsum` since version 2.
 It makes it simpler to generate text using the same options.
 
-```
+```js
 import { LoremIpsum } from "lorem-ipsum";
 // const LoremIpsum = require("lorem-ipsum").LoremIpsum;
 
@@ -59,7 +59,7 @@ compatible with the default function exported by `lorem-ipsum` version
 1. Users of version 1 should be able to upgrade to version 2 without 
 any issue; they can just continue using this library as they did before.
 
-```
+```js
 import { loremIpsum } from "lorem-ipsum";
 // const loremIpsum = require("lorem-ipsum").loremIpsum;
 
@@ -69,7 +69,7 @@ loremIpsum(); // generates one sentence
 Like before, you can pass in a number of options to customize the output.
 The example below shows the default options.
 
-```
+```js
 import { loremIpsum } from "lorem-ipsum";
 
 loremIpsum({
