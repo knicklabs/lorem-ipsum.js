@@ -131,7 +131,7 @@ lorem-ipsum 2 paragraphs
 lorem-ipsum 2 paragraphs --copy
 # Prints two pargraphs and copies it to your clipboard
 
-lorem-ipsum 2 pargraphs --format html
+lorem-ipsum 2 paragraphs --format html
 # Prints two paragraphs in HTML format
 
 lorem-ipsum 2 paragraphs --format html --copy
